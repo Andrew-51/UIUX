@@ -35,15 +35,7 @@
         transform: translate(0, 0) rotate(0);
         opacity: 0;
       }
-      15% {
-        transform: translate(-200px, 100px) rotate(45deg);
-        opacity: 0.5;
-      }
       25% {
-        transform: translate(200px, -50px) rotate(45deg);
-        opacity: 0.5;
-      }
-      35% {
         transform: translate(-100px, 50px) rotate(45deg);
         opacity: 0.5;
       }
@@ -51,17 +43,37 @@
         transform: translate(150px, -100px) rotate(-30deg);
         opacity: 0.8;
       }
-      65% {
+      75% {
         transform: translate(-50px, -150px) rotate(15deg);
-        opacity: 0.9;
-      }
-      80% {
-        transform: translate(50px, 150px) rotate(15deg);
         opacity: 0.9;
       }
       100% {
         transform: translate(0, 0) rotate(0);
         opacity: 1;
+      }
+    }
+
+    /* Animazione del testo di introduzione */
+    .intro-text {
+      font-size: 1.5em;
+      opacity: 0;
+      transform: scale(0.5);
+      animation: textBoom 0.8s ease-out forwards;
+      animation-delay: 3s; /* Aspetta che il titolo si stabilizzi */
+    }
+
+    @keyframes textBoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
       }
     }
   </style>
@@ -73,7 +85,7 @@
       <!-- Slide 1: Introduzione -->
       <section>
         <h1 class="intro-title">UI e UX</h1>
-        <p>Comprendere il design dell'interfaccia utente e l'esperienza utente</p>
+        <p class="intro-text">Comprendere il design dell'interfaccia utente e l'esperienza utente</p>
       </section>
 
       <!-- Slide 2: Cos'è UI e UX -->
