@@ -4,9 +4,13 @@
   <meta charset="utf-8">
   <title>Presentazione UI/UX</title>
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/white.css"> <!-- Tema chiaro -->
+  <link rel="stylesheet" href="dist/theme/white.css">
   <style>
-    /* Stili personalizzati per immagini e testo */
+    /* Stili personalizzati */
+    body {
+      margin: 0;
+      padding: 0;
+    }
     img {
       max-width: 100%;
       height: auto;
@@ -21,195 +25,116 @@
       padding: 10px;
       margin: 10px;
     }
-
-    /* Animazione del titolo */
     .intro-title {
-      display: inline-block;
-      position: relative;
       font-size: 2.5em;
       animation: moveAround 3s ease-in-out forwards;
     }
-
     @keyframes moveAround {
-      0% {
-        transform: translate(0, 0) rotate(0);
-        opacity: 0;
-      }
-      25% {
-        transform: translate(-100px, 50px) rotate(45deg);
-        opacity: 0.5;
-      }
-      50% {
-        transform: translate(150px, -100px) rotate(-30deg);
-        opacity: 0.8;
-      }
-      75% {
-        transform: translate(-50px, -150px) rotate(15deg);
-        opacity: 0.9;
-      }
-      100% {
-        transform: translate(0, 0) rotate(0);
-        opacity: 1;
-      }
+      0% { transform: translate(0, 0) rotate(0); opacity: 0; }
+      100% { transform: translate(0, 0) rotate(0); opacity: 1; }
     }
-
-    /* Animazione del testo di introduzione */
     .intro-text {
       font-size: 1.5em;
       opacity: 0;
-      transform: scale(0.5);
       animation: textBoom 0.8s ease-out forwards;
-      animation-delay: 3s; /* Aspetta che il titolo si stabilizzi */
     }
-
     @keyframes textBoom {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-      50% {
-        opacity: 0.5;
-        transform: scale(1.2);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* Effetto glitch */
-    @keyframes glitchBackground {
-      0% {
-        background-color: white;
-      }
-      25% {
-        background-color: #222;
-      }
-      50% {
-        background-color: white;
-      }
-      75% {
-        background-color: #000;
-      }
-      100% {
-        background-color: black;
-      }
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
     }
     .glitch {
-      animation: glitchBackground 2s ease-in-out forwards;
+      animation: glitchBackground 2s infinite alternate;
     }
+    @keyframes glitchBackground {
+      0% { background-color: transparent; }
+      50% { background-color: rgba(255, 255, 255, 0.2); }
+      100% { background-color: transparent; }
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+    }
+    .background-black { background-color: black; color: white; }
+    .background-green { background-color: green; color: white; }
+    .background-red { background-color: red; color: white; }
+    .background-blue { background-color: blue; color: white; }
+    .background-white { background-color: white; color: black; }
   </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-
-      <!-- Slide 1: Bianca vuota -->
+      <!-- Slide 1: Vuota -->
       <section>
+        <img src="logo.png" alt="Logo aziendale" class="logo">
       </section>
 
-      <!-- Slide 2: Background con effetto glitch -->
-      <section class="glitch">
+      <!-- Slide 2-6: Nero -->
+      <section class="background-black glitch">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
         <h1 class="intro-title">UI e UX</h1>
         <p class="intro-text">Comprendere il design dell'interfaccia utente e l'esperienza utente</p>
       </section>
 
-      <!-- Slide 3: Cos'è UI e UX -->
-      <section>
+      <section class="background-black">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
         <h2>Cos'è l'UI?</h2>
         <p>L'interfaccia utente (UI) riguarda l'aspetto visivo e il layout dell'applicazione.</p>
-        <ul>
-          <li>Colori</li>
-          <li>Tipografia</li>
-          <li>Pulsanti, icone e menu</li>
-        </ul>
       </section>
 
-      <section>
-        <h2>Cos'è la UX?</h2>
-        <p>L'esperienza utente (UX) riguarda come l'utente interagisce e si sente durante l'uso del prodotto.</p>
-        <ul>
-          <li>Flusso di navigazione</li>
-          <li>Accessibilità</li>
-          <li>Facilità d'uso</li>
-        </ul>
-      </section>
-
-      <!-- Slide 4: Differenze tra UI e UX -->
-      <section>
-        <h2>UI vs UX</h2>
-        <p><strong>UI</strong> è ciò che vedi. <strong>UX</strong> è ciò che provi.</p>
-        <table>
-          <tr>
-            <th>UI</th>
-            <th>UX</th>
-          </tr>
-          <tr>
-            <td>Design di pulsanti e icone</td>
-            <td>Come sono organizzati i pulsanti</td>
-          </tr>
-          <tr>
-            <td>Scelta dei colori</td>
-            <td>Facilità di navigazione</td>
-          </tr>
-          <tr>
-            <td>Tipografia accattivante</td>
-            <td>Accessibilità per tutti</td>
-          </tr>
-        </table>
-      </section>
-
-      <!-- Slide 5: Principi fondamentali di UI/UX -->
-      <section>
-        <h2>Principi di UI/UX</h2>
-        <ul>
-          <li>Mantenere la semplicità</li>
-          <li>Assicurare coerenza</li>
-          <li>Progettare per l'utente</li>
-          <li>Feedback immediato</li>
-        </ul>
-      </section>
-
-      <!-- Slide 6: DO's e DONT's per UI -->
-      <section>
-        <h2>UI: DO's e DONT's</h2>
+      <!-- Slide 4-6: Nero con DO's e DONT's -->
+      <section class="background-black">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
         <div style="display: flex; justify-content: space-around;">
           <div class="do">
             <h3>DO</h3>
             <p>Pulsanti grandi e chiari</p>
-            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_LEUCAhrzH1ENF7n7gnUTg.png" alt="Pulsante corretto">
           </div>
           <div class="dont">
             <h3>DON'T</h3>
             <p>Pulsanti troppo piccoli o ambigui</p>
-            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*pl-JN70Bhtk_rBNsqboLkA.png" alt="Pulsante errato">
           </div>
         </div>
       </section>
 
-      <!-- Slide 7: DO's e DONT's per UX -->
-      <section>
-        <h2>UX: DO's e DONT's</h2>
+      <!-- Slide 7-10: Verde -->
+      <section class="background-green glitch">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
+        <h1 class="intro-title">Accessibilità</h1>
+        <p class="intro-text">L'UX parte da un'esperienza inclusiva</p>
+      </section>
+
+      <section class="background-green">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
+        <h2>Cos'è la UX?</h2>
+        <p>L'esperienza utente (UX) riguarda come l'utente interagisce e si sente durante l'uso del prodotto.</p>
+      </section>
+
+      <!-- Slide 9-10: Verde con DO's e DONT's -->
+      <section class="background-green">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
         <div style="display: flex; justify-content: space-around;">
           <div class="do">
             <h3>DO</h3>
-            <p>Chiare istruzioni passo passo</p>
-            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*VTTKYHp0eMe87IEyiEMSSA.png" alt="UX corretto">
+            <p>Chiara navigazione passo-passo</p>
           </div>
           <div class="dont">
             <h3>DON'T</h3>
-            <p>Flusso confuso o disorganizzato</p>
-            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*qAwL5EucA6otUxvDxyU7Vw.png" alt="UX errato">
+            <p>Flusso disorganizzato</p>
           </div>
         </div>
       </section>
 
-      <!-- Slide 8: Conclusione -->
-      <section>
-        <h2>Conclusione</h2>
-        <p>UI e UX lavorano insieme per creare esperienze indimenticabili.</p>
-        <p><strong>Ricorda:</strong> Progetta sempre pensando all'utente!</p>
+      <!-- Slide 11-15: Rosso -->
+      <section class="background-red glitch">
+        <img src="logo.png" alt="Logo aziendale" class="logo">
+        <h1 class="intro-title">Feedback immediato</h1>
+        <p class="intro-text">Un buon design offre risposte rapide</p>
       </section>
+
+      <!-- Continua per i gruppi successivi... -->
 
     </div>
   </div>
@@ -217,9 +142,9 @@
   <script src="dist/reveal.js"></script>
   <script>
     Reveal.initialize({
-      transition: 'slide', // Tipo di transizione
-      slideNumber: true,   // Mostra il numero delle slide
-      hash: true           // Permette di navigare con gli hash (#)
+      transition: 'slide',
+      slideNumber: true,
+      hash: true
     });
   </script>
 </body>
