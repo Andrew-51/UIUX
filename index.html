@@ -8,38 +8,53 @@
   <style>
     /* Stili personalizzati */
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    .reveal {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    .slides {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.reveal {
+  position: fixed; /* Blocca il contenitore alla finestra */
+  width: 100vw; /* Larghezza intera */
+  height: 100vh; /* Altezza intera */
+  margin: 0;
+  padding: 0;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+img.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px; /* Dimensione del logo */
+}
+
+.background-black, .background-green, .background-red, .background-blue, .background-white {
+  width: 100%;
+  height: 100%;
+}
+
     .do {
       border: 3px solid green;
       padding: 10px;
