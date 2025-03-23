@@ -8,11 +8,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="presentation-style.css">
+    
+    <!-- Adding inline styles for immediate visibility -->
+    <style>
+        /* Core structure with black background */
+        body {
+            background-color: #000000 !important;
+        }
+        
+        /* Neon text effect */
+        h1 {
+            color: #00C7FF !important;
+            text-shadow: 0 0 10px rgba(0, 199, 255, 0.7), 0 0 20px rgba(0, 199, 255, 0.5) !important;
+        }
+        
+        h2 {
+            color: #00C7FF !important; 
+            text-shadow: 0 0 10px rgba(0, 199, 255, 0.5) !important;
+        }
+        
+        /* Card styling with glow */
+        .ui-section, .ux-section, .dos, .donts, .visual-item, .a11y-item, .responsive-item {
+            background-color: rgba(20, 20, 30, 0.7) !important;
+            border: 1px solid rgba(0, 199, 255, 0.2) !important;
+            border-radius: 16px !important;
+            box-shadow: 0 0 15px rgba(0, 199, 255, 0.15) !important;
+        }
+        
+        /* Different colors for different sections */
+        .ux-section {
+            border-color: rgba(255, 0, 229, 0.2) !important;
+            box-shadow: 0 0 15px rgba(255, 0, 229, 0.15) !important;
+        }
+        
+        .dos {
+            border-color: rgba(0, 255, 102, 0.2) !important;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.15) !important;
+        }
+        
+        .donts {
+            border-color: rgba(255, 61, 94, 0.2) !important;
+            box-shadow: 0 0 15px rgba(255, 61, 94, 0.15) !important;
+        }
+        
+        /* Colored headings */
+        .dos h3 {
+            color: #00FF66 !important;
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.5) !important;
+        }
+        
+        .donts h3 {
+            color: #FF3D5E !important;
+            text-shadow: 0 0 10px rgba(255, 61, 94, 0.5) !important;
+        }
+    </style>
 </head>
 <body>
-    <!-- Background animation container -->
-    <div class="noise-bg"></div>
-    
     <div class="reveal">
         <div class="slides">
             <!-- Slide 1: Title -->
