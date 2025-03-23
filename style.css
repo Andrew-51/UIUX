@@ -644,84 +644,85 @@ ul li:hover {
     100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
 }
 
-/* ===== Animations - Apple style ===== */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Add noise background texture for that Apple neon aesthetic */
+.noise-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    z-index: -1;
+    pointer-events: none;
 }
 
-@keyframes slideInLeft {
-    from { 
-        opacity: 0;
-        transform: translateX(-30px); 
-    }
-    to { 
-        opacity: 1;
-        transform: translateX(0); 
-    }
+/* Title slide glowing animation */
+.title-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle at center, rgba(0, 199, 255, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulseGlow 4s ease-in-out infinite alternate;
+    z-index: -1;
 }
 
-@keyframes slideInRight {
-    from { 
-        opacity: 0;
-        transform: translateX(30px); 
-    }
-    to { 
-        opacity: 1;
-        transform: translateX(0); 
-    }
+/* Generic content card for consistent styling */
+.content-card {
+    background-color: var(--card-bg);
+    padding: 1.5em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s var(--transition-timing);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes slideInUp {
-    from { 
-        opacity: 0;
-        transform: translateY(30px); 
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0); 
-    }
+.content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-blue);
+    opacity: 0.8;
 }
 
-@keyframes scaleIn {
-    from { 
-        opacity: 0;
-        transform: scale(0.95); 
-    }
-    to { 
-        opacity: 1;
-        transform: scale(1); 
-    }
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-blue);
+    border-color: rgba(0, 199, 255, 0.3);
 }
 
-@keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Enhanced animation classes */
+@keyframes neonPulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
 }
 
-/* Animation for elements - Apple's smooth transitions */
-.reveal .slides section.present h1 {
-    animation: slideInUp 0.7s var(--transition-timing) forwards;
-}
-
-.reveal .slides section.present h2 {
-    animation: slideInLeft 0.7s var(--transition-timing) forwards;
-    animation-delay: 0.1s;
+/* Adjust animation to apply to all elements by default */
+h1, h2, h3, p, ul, .content-card, .dos, .donts, .image-placeholder, 
+.visual-item, .a11y-item, .responsive-item, .ds-item, .ia-item, 
+.mistake-item, .resource-item {
     opacity: 0;
-    animation-fill-mode: forwards;
+    transform: translateY(20px);
+    transition: opacity 0.7s var(--transition-timing), 
+                transform 0.7s var(--transition-timing);
 }
 
-.reveal .slides section.present h3 {
-    animation: fadeIn 0.7s var(--transition-timing) forwards;
-    animation-delay: 0.2s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-.reveal .slides section.present p, 
-.reveal .slides section.present ul {
-    animation: fadeIn 0.7s var(--transition-timing) forwards;
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}animation: fadeIn 0.7s var(--transition-timing) forwards;
     animation-delay: 0.3s;
     opacity: 0;
     animation-fill-mode: forwards;
