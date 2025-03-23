@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UI/UX Best Practices</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
   <style>
     /* ============ CSS STYLES ============ */
     
@@ -31,7 +30,6 @@
     
     .reveal {
       font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-darker);
     }
     
     /* Typography */
@@ -258,22 +256,19 @@
     }
     
     /* Slide backgrounds */
-    .reveal .slide-background {
-      background-color: var(--bg-darker);
-    }
-    
     .reveal .backgrounds .title-gradient {
       background: radial-gradient(circle at center, rgba(10, 132, 255, 0.4) 0%, var(--bg-darker) 70%);
     }
     
-    /* Fix for slide sections (eliminates flash) */
-    .reveal .slides section {
-      background: transparent; /* Remove background from individual slides */
+    .reveal .slide-background {
+      background-color: var(--bg-darker);
     }
-
-    /* Apply gradient effect directly to the background */
-    .reveal .slide-background-content {
+    
+    .reveal .slides section {
       background: linear-gradient(160deg, var(--bg-color) 0%, var(--bg-darker) 100%);
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      color: rgba(255,255,255,0.85);
     }
     
     /* Animations */
@@ -313,38 +308,6 @@
         </ul>
         <div class="highlight-box">
           <p>"Good design is obvious. Great design is transparent."</p>
-        </div>
-      </section>
-
-      <!-- What is UI -->
-      <section>
-        <h2>What is <span class="accent">UI</span></h2>
-        <p>User Interface - The visual elements users interact with</p>
-        <ul>
-          <li>All visual touchpoints between users and product</li>
-          <li>Includes buttons, input fields, navigation, typography</li>
-          <li>Focuses on aesthetics and visual presentation</li>
-          <li>Creates the first impression of your product</li>
-          <li>Directly impacts perceived quality and trustworthiness</li>
-        </ul>
-        <div class="highlight-box">
-          <p>"The UI is the conversation between user and product"</p>
-        </div>
-      </section>
-      
-      <!-- What is UX -->
-      <section>
-        <h2>What is <span class="accent">UX</span></h2>
-        <p>User Experience - The overall feeling and journey</p>
-        <ul>
-          <li>The holistic experience of interacting with a product</li>
-          <li>Encompasses utility, usability, and emotional response</li>
-          <li>Considers user goals, pain points, and mental models</li>
-          <li>Extends beyond digital to all touchpoints</li>
-          <li>Prioritizes solving real user problems effectively</li>
-        </ul>
-        <div class="highlight-box">
-          <p>"UX isn't about how a product looks, but how it works"</p>
         </div>
       </section>
       
@@ -533,25 +496,16 @@
       
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/markdown/markdown.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js"></script>
   <script>
-    // Wait for everything to load
-    window.onload = function() {
-      // Add a background color to the presentation container
-      document.querySelector('.reveal').style.backgroundColor = 'var(--bg-darker)';
-      
-      // Basic initialization with minimal configuration
-      Reveal.initialize({
-        hash: true,
-        transition: 'none',
-        backgroundTransition: 'none',
-        // Disable features that might cause errors
-        dependencies: []
-      });
-    };
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      transition: 'slide',
+      backgroundTransition: 'fade'
+    });
   </script>
 </body>
 </html>
