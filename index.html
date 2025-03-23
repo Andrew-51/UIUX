@@ -321,6 +321,12 @@
       max-width: 80%;
     }
     
+    /* Title animations for the hero section */
+    @keyframes title-in {
+      0% { opacity: 0; transform: translateX(-40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    
     .hero-title {
       font-size: 5em !important;
       line-height: 0.9 !important;
@@ -331,11 +337,8 @@
       letter-spacing: -0.03em !important;
       font-weight: 800 !important;
       text-align: left !important;
-      position: relative !important;
-      z-index: 2 !important;
-      transform: translateX(-100px) !important;
-      opacity: 0 !important;
-      animation: slide-in 1.2s forwards ease-out, glow-pulse 4s infinite alternate !important;
+      opacity: 0;
+      animation: title-in 1s forwards 0.5s;
     }
     
     .hero-title::after {
@@ -349,7 +352,6 @@
       -webkit-text-fill-color: transparent;
       filter: blur(15px);
       opacity: 0.7;
-      animation: glow-pulse 4s infinite alternate;
     }
     
     .hero-subtitle {
@@ -362,11 +364,8 @@
       letter-spacing: -0.03em !important;
       font-weight: 800 !important;
       text-align: left !important;
-      position: relative !important;
-      z-index: 2 !important;
-      transform: translateX(-100px) !important;
-      opacity: 0 !important;
-      animation: slide-in 1.2s 0.3s forwards ease-out, glow-pulse 4s infinite alternate !important;
+      opacity: 0;
+      animation: title-in 1s forwards 0.8s;
     }
     
     .hero-subtitle::after {
@@ -380,17 +379,6 @@
       -webkit-text-fill-color: transparent;
       filter: blur(15px);
       opacity: 0.7;
-      animation: glow-pulse 4s infinite alternate;
-    }
-    
-    @keyframes slide-in {
-      0% { transform: translateX(-100px); opacity: 0; }
-      100% { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes glow-pulse {
-      0%, 100% { filter: blur(15px); opacity: 0.4; }
-      50% { filter: blur(20px); opacity: 0.7; }
     }
     
     .hero-divider {
@@ -401,17 +389,12 @@
       margin: 30px 0;
       box-shadow: var(--accent-glow);
       opacity: 0;
-      animation: grow-width 1.5s 0.7s forwards ease-out, glow-intense 3s infinite alternate;
+      animation: grow-width 1.5s 1.2s forwards;
     }
     
     @keyframes grow-width {
       0% { width: 0%; opacity: 0; }
       100% { width: 30%; opacity: 1; }
-    }
-    
-    @keyframes glow-intense {
-      0%, 100% { box-shadow: 0 0 15px 2px rgba(10, 132, 255, 0.5); }
-      50% { box-shadow: 0 0 25px 4px rgba(10, 132, 255, 0.8); }
     }
     
     .tagline {
@@ -421,9 +404,9 @@
       margin: 15px 0 30px 0 !important;
       font-size: 2em !important;
       text-align: left !important;
-      opacity: 0 !important;
-      transform: translateY(20px) !important;
-      animation: fade-up 1s 1s forwards ease-out !important;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fade-up 1s 1.5s forwards;
     }
     
     @keyframes fade-up {
@@ -444,18 +427,13 @@
       margin-top: 20px;
       opacity: 0;
       transform: scale(0.8);
-      animation: pop-in 0.5s 1.5s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67), pulse-glow 3s 2s infinite alternate;
+      animation: pop-in 0.5s 2s forwards;
     }
     
     @keyframes pop-in {
       0% { opacity: 0; transform: scale(0.8); }
       50% { opacity: 1; transform: scale(1.1); }
       100% { opacity: 1; transform: scale(1); }
-    }
-    
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 15px 2px rgba(10, 132, 255, 0.5); }
-      50% { box-shadow: 0 0 25px 5px rgba(10, 132, 255, 0.8); }
     }
     
     .hero-emoji {
@@ -852,37 +830,72 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js"></script>
   <script>
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      center: true,
-      hash: true,
-      transition: 'slide',
-      backgroundTransition: 'fade',
-      // Add auto-animations
-      autoAnimateEasing: 'ease-out',
-      autoAnimateDuration: 0.8,
-      autoAnimateUnmatched: false
-    });
-    
-    // Add custom transition effects after load
-    Reveal.addEventListener('ready', function() {
-      // Add transition classes to slides
-      const slides = document.querySelectorAll('.slides section');
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize reveal.js
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transition: 'fade', // Simple transition that works everywhere
+        backgroundTransition: 'fade',
+        // Custom property that we'll use to trigger our animations
+        viewDistance: 2,
+        transitionSpeed: 'fast'
+      });
       
-      slides.forEach((slide, index) => {
-        if (index > 0) { // Skip the title slide
-          slide.classList.add('custom-transition');
+      // Animation system for slide content
+      function handleSlideAnimation() {
+        const currentSlide = Reveal.getCurrentSlide();
+        
+        // First animate title elements if they exist
+        const title = currentSlide.querySelector('h1, h2');
+        if (title) {
+          title.style.opacity = '0';
+          title.style.transform = 'translateY(-20px)';
           
-          // Add different transition effects based on slide position
-          if (index % 3 === 1) {
-            slide.classList.add('slide-from-right');
-          } else if (index % 3 === 2) {
-            slide.classList.add('slide-from-bottom');
-          } else {
-            slide.classList.add('fade-in-scale');
-          }
+          setTimeout(() => {
+            title.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+            title.style.opacity = '1';
+            title.style.transform = 'translateY(0)';
+          }, 200);
         }
+        
+        // Then animate list items with a staggered delay
+        const listItems = currentSlide.querySelectorAll('li');
+        listItems.forEach((item, index) => {
+          item.style.opacity = '0';
+          item.style.transform = 'translateX(-20px)';
+          
+          setTimeout(() => {
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            item.style.opacity = '1';
+            item.style.transform = 'translateX(0)';
+          }, 500 + (index * 150));
+        });
+        
+        // Then animate other content with a delay
+        const contentElements = currentSlide.querySelectorAll('p, .example-container, .container, .highlight-box');
+        contentElements.forEach((element, index) => {
+          element.style.opacity = '0';
+          element.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            element.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+          }, 300 + (index * 100));
+        });
+      }
+      
+      // Run animation when a slide is shown
+      Reveal.on('slidechanged', event => {
+        handleSlideAnimation();
+      });
+      
+      // Also run for the first slide when the presentation loads
+      Reveal.on('ready', event => {
+        handleSlideAnimation();
       });
     });
   </script>
