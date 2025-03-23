@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern UI/UX Design: Principles & Best Practices</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/night.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="presentation-style.css">
 </head>
@@ -400,31 +400,33 @@
             progress: true,
             history: true,
             center: false,
-            height: '100%',
             width: '100%',
+            height: '100%',
             margin: 0,
             minScale: 0.2,
             maxScale: 1.5,
             transition: 'slide',
-            // Improved configuration options
+            // Essential configuration for fluid display
             hash: true,
             slideNumber: true,
             touch: true,
-            // Disable scrolling within slides
+            // These settings help with content fitting
             disableLayout: false,
-            embedded: false,
-            // Auto-animate settings
+            // Auto-animate settings from original
             autoAnimateEasing: 'ease-out',
             autoAnimateDuration: 0.8,
             autoAnimateUnmatched: false,
             // Enable plugins
             plugins: [ RevealZoom ],
-            // Fix height issues - no scrolling
-            maxScale: 1.5,
-            // Make sure content fits properly
-            display: 'flex',
-            // Enable slide controls even if slide content is tall
-            controlsTutorial: true
+            // Important for dark theme
+            backgroundTransition: 'fade',
+            // Scale to fit all content
+            scale: 0.85,
+            // Important - prevents content from being cut off
+            keyboard: true,
+            overview: true,
+            // Allow text to be selected
+            mouseWheel: false
         });
         
         // Animation trigger for slide content
