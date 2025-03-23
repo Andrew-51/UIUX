@@ -6,6 +6,7 @@
     <title>Modern UI/UX Design: Principles & Best Practices</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -584,17 +585,40 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom-js/zoom.min.js"></script>
     <script>
         Reveal.initialize({
             controls: true,
             progress: true,
             history: true,
             center: false,
+            height: '100%',
+            width: '100%',
+            margin: 0,
+            minScale: 0.2,
+            maxScale: 1.5,
             transition: 'slide',
-            // Optional libraries
-            dependencies: [
-                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom-js/zoom.min.js', async: true }
-            ]
+            // Added more configuration options
+            hash: true,
+            slideNumber: true,
+            touch: true,
+            // Set auto-animate for motion between slides
+            autoAnimateEasing: 'ease-out',
+            autoAnimateDuration: 0.8,
+            autoAnimateUnmatched: false,
+            // Enable plugins
+            plugins: [ RevealZoom ]
+        });
+        
+        // Animation trigger for slide content
+        Reveal.addEventListener('slidechanged', function(event) {
+            const currentSlide = event.currentSlide;
+            // Reset and apply animation classes
+            setTimeout(() => {
+                currentSlide.querySelectorAll('.animate-trigger').forEach(el => {
+                    el.classList.add('animated');
+                });
+            }, 100);
         });
     </script>
 </body>
