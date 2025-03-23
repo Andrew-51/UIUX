@@ -852,72 +852,37 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize reveal.js
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        center: true,
-        hash: true,
-        transition: 'fade', // Simple transition that works everywhere
-        backgroundTransition: 'fade',
-        // Custom property that we'll use to trigger our animations
-        viewDistance: 2,
-        transitionSpeed: 'fast'
-      });
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      // Add auto-animations
+      autoAnimateEasing: 'ease-out',
+      autoAnimateDuration: 0.8,
+      autoAnimateUnmatched: false
+    });
+    
+    // Add custom transition effects after load
+    Reveal.addEventListener('ready', function() {
+      // Add transition classes to slides
+      const slides = document.querySelectorAll('.slides section');
       
-      // Animation system for slide content
-      function handleSlideAnimation() {
-        const currentSlide = Reveal.getCurrentSlide();
-        
-        // First animate title elements if they exist
-        const title = currentSlide.querySelector('h1, h2');
-        if (title) {
-          title.style.opacity = '0';
-          title.style.transform = 'translateY(-20px)';
+      slides.forEach((slide, index) => {
+        if (index > 0) { // Skip the title slide
+          slide.classList.add('custom-transition');
           
-          setTimeout(() => {
-            title.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-            title.style.opacity = '1';
-            title.style.transform = 'translateY(0)';
-          }, 200);
+          // Add different transition effects based on slide position
+          if (index % 3 === 1) {
+            slide.classList.add('slide-from-right');
+          } else if (index % 3 === 2) {
+            slide.classList.add('slide-from-bottom');
+          } else {
+            slide.classList.add('fade-in-scale');
+          }
         }
-        
-        // Then animate list items with a staggered delay
-        const listItems = currentSlide.querySelectorAll('li');
-        listItems.forEach((item, index) => {
-          item.style.opacity = '0';
-          item.style.transform = 'translateX(-20px)';
-          
-          setTimeout(() => {
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            item.style.opacity = '1';
-            item.style.transform = 'translateX(0)';
-          }, 500 + (index * 150));
-        });
-        
-        // Then animate other content with a delay
-        const contentElements = currentSlide.querySelectorAll('p, .example-container, .container, .highlight-box');
-        contentElements.forEach((element, index) => {
-          element.style.opacity = '0';
-          element.style.transform = 'translateY(20px)';
-          
-          setTimeout(() => {
-            element.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-          }, 300 + (index * 100));
-        });
-      }
-      
-      // Run animation when a slide is shown
-      Reveal.on('slidechanged', event => {
-        handleSlideAnimation();
-      });
-      
-      // Also run for the first slide when the presentation loads
-      Reveal.on('ready', event => {
-        handleSlideAnimation();
       });
     });
   </script>
