@@ -1,759 +1,601 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI/UX Design Essentials</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/night.min.css">
-  <style>
-    :root {
-      --primary: #4B9CD3;
-      --accent: #FF6B6B;
-      --text: #FFFFFF;
-      --background: #222;
-      --success: #28a745;
-      --danger: #dc3545;
-    }
-    
-    .reveal {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--text);
-    }
-    
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--primary);
-      text-transform: none;
-      letter-spacing: normal;
-    }
-    
-    .reveal h1 {
-      font-size: 2.2em;
-    }
-    
-    .reveal h2 {
-      font-size: 1.8em;
-    }
-    
-    .reveal h3 {
-      font-size: 1.4em;
-      margin-bottom: 0.5em;
-    }
-    
-    .reveal p {
-      line-height: 1.5;
-    }
-    
-    .reveal section {
-      text-align: left;
-    }
-    
-    .reveal .slides {
-      text-align: left;
-    }
-    
-    .do-dont {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1em;
-    }
-    
-    .do, .dont {
-      width: 48%;
-      padding: 1em;
-      border-radius: 8px;
-    }
-    
-    .do {
-      background-color: rgba(40, 167, 69, 0.2);
-      border: 2px solid var(--success);
-    }
-    
-    .dont {
-      background-color: rgba(220, 53, 69, 0.2);
-      border: 2px solid var(--danger);
-    }
-    
-    .do h3, .dont h3 {
-      margin-top: 0;
-      text-align: center;
-      color: var(--text);
-    }
-    
-    .do h3::before {
-      content: "✓ ";
-      color: var(--success);
-    }
-    
-    .dont h3::before {
-      content: "✗ ";
-      color: var(--danger);
-    }
-    
-    .principle {
-      margin-bottom: 1em;
-      padding: 0.5em;
-      border-left: 4px solid var(--primary);
-      background-color: rgba(75, 156, 211, 0.1);
-    }
-    
-    .principle h3 {
-      margin: 0 0 0.5em 0;
-    }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1em;
-    }
-    
-    .card {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      padding: 1em;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .card h4 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-    
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      margin: 1em 0;
-    }
-    
-    .timeline-item {
-      display: flex;
-      margin-bottom: 1em;
-    }
-    
-    .timeline-marker {
-      width: 40px;
-      text-align: center;
-      font-size: 1.5em;
-      color: var(--primary);
-    }
-    
-    .timeline-content {
-      flex: 1;
-      padding-left: 1em;
-      border-left: 2px solid var(--primary);
-    }
-    
-    .timeline-content h4 {
-      margin: 0;
-      color: var(--accent);
-    }
-    
-    .text-center {
-      text-align: center !important;
-    }
-    
-    .highlight {
-      color: var(--accent);
-      font-weight: bold;
-    }
-
-    .image-placeholder {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px dashed rgba(255, 255, 255, 0.3);
-      border-radius: 8px;
-      padding: 2em;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.5);
-      margin: 1em 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern UI/UX Design: Principles & Best Practices</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-      
-      <!-- SLIDE 1: Title -->
-      <section class="text-center">
-        <h1>UI/UX Design Essentials</h1>
-        <h3>Creating Exceptional User Experiences</h3>
-        <p>A comprehensive guide to effective design principles</p>
-      </section>
-      
-      <!-- SLIDE 2: Introduction -->
-      <section>
-        <h2>What is UI/UX Design?</h2>
-        <div class="grid">
-          <div class="card">
-            <h4>User Interface (UI)</h4>
-            <p>The visual elements users interact with — buttons, menus, forms, colors, typography, and overall layout.</p>
-          </div>
-          <div class="card">
-            <h4>User Experience (UX)</h4>
-            <p>The holistic journey and emotions users feel when interacting with a product or service.</p>
-          </div>
-        </div>
-        <p class="text-center">Great design happens when UI and UX work together seamlessly.</p>
-      </section>
-      
-      <!-- SLIDE 3: Core Principles -->
-      <section>
-        <h2>Core UI/UX Principles</h2>
-        
-        <div class="principle">
-          <h3>Usability</h3>
-          <p>Products should be intuitive and easy to use without requiring instructions.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Accessibility</h3>
-          <p>Design for all users, including those with disabilities or limitations.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Consistency</h3>
-          <p>Use uniform patterns, elements, and behaviors throughout the interface.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Hierarchy</h3>
-          <p>Guide users through content with clear visual organization and priority.</p>
-        </div>
-      </section>
-      
-      <!-- SLIDE 4: User Research -->
-      <section>
-        <h2>User Research</h2>
-        <p>The foundation of effective UX design</p>
-        
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">1</div>
-            <div class="timeline-content">
-              <h4>User Interviews</h4>
-              <p>Direct conversations with your target audience to understand their needs.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">2</div>
-            <div class="timeline-content">
-              <h4>Surveys & Questionnaires</h4>
-              <p>Gather quantitative data from larger user groups.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">3</div>
-            <div class="timeline-content">
-              <h4>Usability Testing</h4>
-              <p>Observe users interacting with your product to identify pain points.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">4</div>
-            <div class="timeline-content">
-              <h4>Analytics</h4>
-              <p>Use data to understand user behavior patterns and preferences.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 5: Navigation Design -->
-      <section>
-        <h2>Navigation Design</h2>
-        
-        <div class="do-dont">
-          <div class="do">
-            <h3>DO</h3>
-            <ul>
-              <li>Keep navigation consistent across pages</li>
-              <li>Use clear, descriptive labels</li>
-              <li>Implement breadcrumbs for complex sites</li>
-              <li>Show users their current location</li>
-              <li>Limit main navigation items (5-7 max)</li>
-            </ul>
-          </div>
-          
-          <div class="dont">
-            <h3>DON'T</h3>
-            <ul>
-              <li>Use unfamiliar navigation patterns</li>
-              <li>Hide important navigation options</li>
-              <li>Create deep navigation hierarchies</li>
-              <li>Use jargon or clever terminology</li>
-              <li>Make users guess where they are</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 6: Visual Hierarchy -->
-      <section>
-        <h2>Visual Hierarchy</h2>
-        <p>Guide users' attention to what matters most</p>
-        
-        <div class="grid">
-          <div class="card">
-            <h4>Size & Scale</h4>
-            <p>Larger elements draw more attention and indicate importance.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Color & Contrast</h4>
-            <p>Use color strategically to highlight key elements and actions.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Typography</h4>
-            <p>Different weights, sizes, and styles create natural information hierarchy.</p>
-          </div>
-          
-          <div class="card">
-            <h4>White Space</h4>
-            <p>Strategic spacing helps organize content and improves readability.</p>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 7: Color Theory -->
-      <section>
-        <h2>Color Theory</h2>
-        
-        <div class="do-dont">
-          <div class="do">
-            <h3>DO</h3>
-            <ul>
-              <li>Create a consistent color palette</li>
-              <li>Ensure sufficient contrast (WCAG AA/AAA)</li>
-              <li>Use color to convey meaning & hierarchy</li>
-              <li>Test colors with colorblind users</li>
-              <li>Limit your color palette (3-5 colors)</li>
-            </ul>
-          </div>
-          
-          <div class="dont">
-            <h3>DON'T</h3>
-            <ul>
-              <li>Rely solely on color to convey information</li>
-              <li>Use clashing or vibrating color combinations</li>
-              <li>Ignore cultural color meanings</li>
-              <li>Use low-contrast text-background combinations</li>
-              <li>Apply too many colors without purpose</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 8: Typography -->
-      <section>
-        <h2>Typography</h2>
-        
-        <div class="grid">
-          <div class="card">
-            <h4>Readability</h4>
-            <p>Choose fonts that are easy to read at various sizes.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Hierarchy</h4>
-            <p>Use different weights, sizes, and styles to structure content.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Consistency</h4>
-            <p>Limit font families (2-3 max) and maintain uniform styling.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Spacing</h4>
-            <p>Proper line height and letter spacing improve readability.</p>
-          </div>
-        </div>
-        
-        <p class="text-center">Typography is <span class="highlight">not just about aesthetics</span> — it's about communication.</p>
-      </section>
-      
-      <!-- SLIDE 9: Form Design -->
-      <section>
-        <h2>Form Design</h2>
-        
-        <div class="do-dont">
-          <div class="do">
-            <h3>DO</h3>
-            <ul>
-              <li>Use clear, specific labels</li>
-              <li>Group related fields together</li>
-              <li>Show validation in real-time</li>
-              <li>Provide helpful error messages</li>
-              <li>Mark required fields clearly</li>
-              <li>Use appropriate input types</li>
-            </ul>
-          </div>
-          
-          <div class="dont">
-            <h3>DON'T</h3>
-            <ul>
-              <li>Ask for unnecessary information</li>
-              <li>Use placeholder text as labels</li>
-              <li>Create overly long forms</li>
-              <li>Hide critical instructions</li>
-              <li>Use generic error messages</li>
-              <li>Reset forms after errors</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 10: Mobile Design -->
-      <section>
-        <h2>Mobile Design</h2>
-        
-        <div class="principle">
-          <h3>Thumb-Friendly Zones</h3>
-          <p>Position key interactions within easy reach of thumbs.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Simplified Content</h3>
-          <p>Prioritize essential content and functionality for smaller screens.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Touch Targets</h3>
-          <p>Make interactive elements at least 44×44px for comfortable tapping.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Responsive Layout</h3>
-          <p>Ensure your design adapts smoothly to different screen sizes.</p>
-        </div>
-        
-        <p class="text-center">Mobile isn't just a smaller screen — it's a different context and interaction model.</p>
-      </section>
-      
-      <!-- SLIDE 11: Accessibility -->
-      <section>
-        <h2>Accessibility (A11Y)</h2>
-        
-        <div class="grid">
-          <div class="card">
-            <h4>Color Contrast</h4>
-            <p>Text: 4.5:1 ratio against background (WCAG AA)</p>
-          </div>
-          
-          <div class="card">
-            <h4>Keyboard Navigation</h4>
-            <p>All interactive elements must be accessible via keyboard</p>
-          </div>
-          
-          <div class="card">
-            <h4>Screen Readers</h4>
-            <p>Use proper semantic HTML and ARIA attributes</p>
-          </div>
-          
-          <div class="card">
-            <h4>Text Sizing</h4>
-            <p>Allow text to be resized up to 200% without breaking layouts</p>
-          </div>
-        </div>
-        
-        <p class="text-center"><span class="highlight">Accessible design is good design</span> — it benefits all users, not just those with disabilities.</p>
-      </section>
-      
-      <!-- SLIDE 12: Microinteractions -->
-      <section>
-        <h2>Microinteractions</h2>
-        <p>Small moments that create delight and improve usability</p>
-        
-        <div class="do-dont">
-          <div class="do">
-            <h3>DO</h3>
-            <ul>
-              <li>Provide immediate feedback for user actions</li>
-              <li>Keep animations subtle and purposeful</li>
-              <li>Enhance the user's mental model</li>
-              <li>Use microinteractions to guide users</li>
-              <li>Test performance across devices</li>
-            </ul>
-          </div>
-          
-          <div class="dont">
-            <h3>DON'T</h3>
-            <ul>
-              <li>Add animations without purpose</li>
-              <li>Create long or distracting animations</li>
-              <li>Ignore users who prefer reduced motion</li>
-              <li>Delay core functionality for animation</li>
-              <li>Create jarring or unexpected behaviors</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 13: Usability Heuristics -->
-      <section>
-        <h2>Nielsen's Usability Heuristics</h2>
-        
-        <div class="grid">
-          <div class="card">
-            <h4>System Status Visibility</h4>
-            <p>Keep users informed about what's happening.</p>
-          </div>
-          
-          <div class="card">
-            <h4>System & Real World Match</h4>
-            <p>Speak the users' language with familiar concepts.</p>
-          </div>
-          
-          <div class="card">
-            <h4>User Control & Freedom</h4>
-            <p>Provide "emergency exits" for unwanted actions.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Consistency & Standards</h4>
-            <p>Follow platform and industry conventions.</p>
-          </div>
-        </div>
-        
-        <p class="text-center">These timeless principles (developed by Jakob Nielsen) remain the foundation of good UX design.</p>
-      </section>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Title -->
+            <section class="title-slide">
+                <h1>Modern UI/UX Design</h1>
+                <h3>Principles & Best Practices</h3>
+                <p class="author">Your Name</p>
+                <p class="date">March 2025</p>
+            </section>
 
-      <!-- SLIDE 14: Error Handling -->
-      <section>
-        <h2>Error Handling</h2>
-        
-        <div class="do-dont">
-          <div class="do">
-            <h3>DO</h3>
-            <ul>
-              <li>Prevent errors before they occur</li>
-              <li>Use clear, non-technical language</li>
-              <li>Indicate exactly what went wrong</li>
-              <li>Suggest specific solutions</li>
-              <li>Maintain the user's progress/data</li>
-            </ul>
-          </div>
-          
-          <div class="dont">
-            <h3>DON'T</h3>
-            <ul>
-              <li>Use error codes without explanation</li>
-              <li>Blame the user ("You did something wrong")</li>
-              <li>Force users to start over</li>
-              <li>Hide errors or make them subtle</li>
-              <li>Provide vague error messages</li>
-            </ul>
-          </div>
+            <!-- Slide 2: Introduction -->
+            <section>
+                <h2>What We'll Cover</h2>
+                <div class="two-columns">
+                    <div>
+                        <ul>
+                            <li>UI vs UX: Understanding the difference</li>
+                            <li>Core principles of good design</li>
+                            <li>User research fundamentals</li>
+                            <li>Information architecture</li>
+                            <li>Wireframing & prototyping</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Visual design principles</li>
+                            <li>Accessibility considerations</li>
+                            <li>Mobile-first design</li>
+                            <li>Design systems & documentation</li>
+                            <li>Common UI/UX mistakes to avoid</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: UI vs UX -->
+            <section>
+                <h2>UI vs UX: What's the Difference?</h2>
+                <div class="two-columns">
+                    <div class="ui-section">
+                        <h3>UI Design</h3>
+                        <p>The visual elements users interact with</p>
+                        <ul>
+                            <li>Buttons, menus, typography</li>
+                            <li>Color schemes & visual style</li>
+                            <li>Layout & composition</li>
+                            <li>Responsive design</li>
+                        </ul>
+                    </div>
+                    <div class="ux-section">
+                        <h3>UX Design</h3>
+                        <p>The overall experience & journey</p>
+                        <ul>
+                            <li>User research & personas</li>
+                            <li>Information architecture</li>
+                            <li>User flows & journey mapping</li>
+                            <li>Usability & accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Core Principles -->
+            <section>
+                <h2>Core Principles of Good Design</h2>
+                <ul class="principles-list">
+                    <li><strong>Clarity:</strong> Design should be intuitive with clear visual hierarchy</li>
+                    <li><strong>Consistency:</strong> Similar elements should behave similarly</li>
+                    <li><strong>Feedback:</strong> Users should know when actions are successful</li>
+                    <li><strong>Efficiency:</strong> Accomplish tasks with minimum steps</li>
+                    <li><strong>Forgiveness:</strong> Allow users to undo mistakes easily</li>
+                    <li><strong>Accessibility:</strong> Design for all users, regardless of ability</li>
+                </ul>
+                <div class="image-placeholder">
+                    <p>[Image: Visual representation of design principles]</p>
+                </div>
+            </section>
+
+            <!-- Slide 5: User Research -->
+            <section>
+                <h2>User Research: Know Your Audience</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3>Research Methods</h3>
+                        <ul>
+                            <li>User interviews</li>
+                            <li>Surveys & questionnaires</li>
+                            <li>Usability testing</li>
+                            <li>A/B testing</li>
+                            <li>Analytics & heatmaps</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Deliverables</h3>
+                        <ul>
+                            <li>User personas</li>
+                            <li>Empathy maps</li>
+                            <li>User journey maps</li>
+                            <li>Research reports</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <p>[Image: Example user persona]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: UX DOs and DON'Ts -->
+            <section>
+                <h2>UX: DOs and DON'Ts</h2>
+                <div class="two-columns">
+                    <div class="dos">
+                        <h3>DO</h3>
+                        <ul>
+                            <li>Conduct user research before designing</li>
+                            <li>Create clear user flows & journeys</li>
+                            <li>Test designs with real users</li>
+                            <li>Design for accessibility from the start</li>
+                            <li>Use data to inform design decisions</li>
+                        </ul>
+                    </div>
+                    <div class="donts">
+                        <h3>DON'T</h3>
+                        <ul>
+                            <li>Design based on assumptions alone</li>
+                            <li>Sacrifice usability for aesthetics</li>
+                            <li>Copy competitors without understanding why</li>
+                            <li>Ignore user feedback and test results</li>
+                            <li>Create complex flows for simple tasks</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Information Architecture -->
+            <section>
+                <h2>Information Architecture</h2>
+                <p>Organizing & structuring content for intuitive navigation</p>
+                <div class="ia-principles">
+                    <div class="ia-item">
+                        <h3>Hierarchy</h3>
+                        <p>Structure content by importance</p>
+                    </div>
+                    <div class="ia-item">
+                        <h3>Navigation</h3>
+                        <p>Help users find what they need</p>
+                    </div>
+                    <div class="ia-item">
+                        <h3>Labeling</h3>
+                        <p>Clear, consistent terminology</p>
+                    </div>
+                    <div class="ia-item">
+                        <h3>Organization</h3>
+                        <p>Logical grouping of content</p>
+                    </div>
+                </div>
+                <div class="image-placeholder">
+                    <p>[Image: Site map example]</p>
+                </div>
+            </section>
+
+            <!-- Slide 8: Wireframing & Prototyping -->
+            <section>
+                <h2>Wireframing & Prototyping</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3>Wireframes</h3>
+                        <ul>
+                            <li>Low-fidelity blueprints</li>
+                            <li>Focus on layout & structure</li>
+                            <li>Quick to create and modify</li>
+                            <li>Great for early feedback</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <p>[Image: Example wireframe]</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Prototypes</h3>
+                        <ul>
+                            <li>Interactive mockups</li>
+                            <li>Test user flows & interactions</li>
+                            <li>Range from low to high fidelity</li>
+                            <li>Validate designs before development</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <p>[Image: Example prototype]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: UI DOs and DON'Ts -->
+            <section>
+                <h2>UI: DOs and DON'Ts</h2>
+                <div class="two-columns">
+                    <div class="dos">
+                        <h3>DO</h3>
+                        <ul>
+                            <li>Maintain visual hierarchy & clear focal points</li>
+                            <li>Use whitespace effectively</li>
+                            <li>Ensure sufficient color contrast</li>
+                            <li>Use consistent UI patterns</li>
+                            <li>Make interactive elements obvious</li>
+                        </ul>
+                    </div>
+                    <div class="donts">
+                        <h3>DON'T</h3>
+                        <ul>
+                            <li>Overwhelm with too many colors or fonts</li>
+                            <li>Use tiny touch targets on mobile</li>
+                            <li>Hide important features in hamburger menus</li>
+                            <li>Create cluttered, busy interfaces</li>
+                            <li>Use low contrast text that's hard to read</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-placeholder">
+                    <p>[Image: Good vs. bad UI examples]</p>
+                </div>
+            </section>
+
+            <!-- Slide 10: Visual Design Principles -->
+            <section>
+                <h2>Visual Design Principles</h2>
+                <div class="visual-principles">
+                    <div class="visual-item">
+                        <h3>Color</h3>
+                        <p>Purpose-driven, accessible, consistent</p>
+                        <div class="image-placeholder mini">
+                            <p>[Color palette]</p>
+                        </div>
+                    </div>
+                    <div class="visual-item">
+                        <h3>Typography</h3>
+                        <p>Readable, hierarchical, limited fonts</p>
+                        <div class="image-placeholder mini">
+                            <p>[Type system]</p>
+                        </div>
+                    </div>
+                    <div class="visual-item">
+                        <h3>Layout</h3>
+                        <p>Grid-based, balanced, purposeful</p>
+                        <div class="image-placeholder mini">
+                            <p>[Grid example]</p>
+                        </div>
+                    </div>
+                    <div class="visual-item">
+                        <h3>Imagery</h3>
+                        <p>Purposeful, consistent style, high-quality</p>
+                        <div class="image-placeholder mini">
+                            <p>[Imagery style]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Accessibility -->
+            <section>
+                <h2>Designing for Accessibility</h2>
+                <div class="a11y-principles">
+                    <div class="a11y-item">
+                        <h3>Perceivable</h3>
+                        <ul>
+                            <li>Alt text for images</li>
+                            <li>Color contrast (4.5:1 minimum)</li>
+                            <li>Text resizing without breaking layout</li>
+                        </ul>
+                    </div>
+                    <div class="a11y-item">
+                        <h3>Operable</h3>
+                        <ul>
+                            <li>Keyboard navigation</li>
+                            <li>Sufficient time to read content</li>
+                            <li>No flashing content</li>
+                        </ul>
+                    </div>
+                    <div class="a11y-item">
+                        <h3>Understandable</h3>
+                        <ul>
+                            <li>Clear labels and instructions</li>
+                            <li>Consistent navigation</li>
+                            <li>Error prevention & suggestions</li>
+                        </ul>
+                    </div>
+                    <div class="a11y-item">
+                        <h3>Robust</h3>
+                        <ul>
+                            <li>Compatible with assistive technologies</li>
+                            <li>Valid, semantic HTML</li>
+                            <li>ARIA when necessary</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Mobile-First Design -->
+            <section>
+                <h2>Mobile-First Design</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3>Why Mobile-First?</h3>
+                        <ul>
+                            <li>Forces focus on core content</li>
+                            <li>Simplifies information architecture</li>
+                            <li>Prioritizes performance</li>
+                            <li>Matches modern user behavior</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Best Practices</h3>
+                        <ul>
+                            <li>Prioritize content over decoration</li>
+                            <li>Use touch-friendly targets (min 44×44px)</li>
+                            <li>Design for thumb zones</li>
+                            <li>Test on actual devices</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <p>[Image: Mobile thumb zones heat map]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Responsive Design -->
+            <section>
+                <h2>Responsive Design Principles</h2>
+                <div class="responsive-principles">
+                    <div class="responsive-item">
+                        <h3>Fluid Grids</h3>
+                        <p>Use relative units (%, em, rem) instead of fixed pixels</p>
+                    </div>
+                    <div class="responsive-item">
+                        <h3>Flexible Images</h3>
+                        <p>Images that scale within containing elements</p>
+                    </div>
+                    <div class="responsive-item">
+                        <h3>Media Queries</h3>
+                        <p>Adapt layout based on device capabilities</p>
+                    </div>
+                    <div class="responsive-item">
+                        <h3>Breakpoints</h3>
+                        <p>Based on content needs, not specific devices</p>
+                    </div>
+                </div>
+                <div class="image-placeholder">
+                    <p>[Image: Responsive design example across devices]</p>
+                </div>
+            </section>
+
+            <!-- Slide 14: Microinteractions -->
+            <section>
+                <h2>Microinteractions: Details Matter</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3>What Are They?</h3>
+                        <p>Small moments that enhance experience:</p>
+                        <ul>
+                            <li>Button hover states</li>
+                            <li>Form feedback</li>
+                            <li>Loading animations</li>
+                            <li>Transitions & animations</li>
+                            <li>Success/error confirmations</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Best Practices</h3>
+                        <ul>
+                            <li>Keep animations under 400ms</li>
+                            <li>Provide visual feedback for all interactions</li>
+                            <li>Design with purpose, not decoration</li>
+                            <li>Consider reduced motion preferences</li>
+                        </ul>
+                        <div class="image-placeholder">
+                            <p>[Image: Microinteraction example]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Design Systems -->
+            <section>
+                <h2>Design Systems</h2>
+                <p>A single source of truth for design decisions</p>
+                <div class="design-system-components">
+                    <div class="ds-item">
+                        <h3>Style Guide</h3>
+                        <p>Colors, typography, spacing, etc.</p>
+                    </div>
+                    <div class="ds-item">
+                        <h3>Component Library</h3>
+                        <p>Reusable UI patterns & elements</p>
+                    </div>
+                    <div class="ds-item">
+                        <h3>Design Principles</h3>
+                        <p>Guidelines for decision-making</p>
+                    </div>
+                    <div class="ds-item">
+                        <h3>Documentation</h3>
+                        <p>Usage rules & code examples</p>
+                    </div>
+                </div>
+                <div class="image-placeholder">
+                    <p>[Image: Design system example]</p>
+                </div>
+            </section>
+
+            <!-- Slide 16: UX Writing -->
+            <section>
+                <h2>UX Writing: Content as Interface</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3>Principles</h3>
+                        <ul>
+                            <li>Clear & concise</li>
+                            <li>Helpful & transparent</li>
+                            <li>Consistent voice & terminology</li>
+                            <li>Human & conversational</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Key Applications</h3>
+                        <ul>
+                            <li>Button labels & CTAs</li>
+                            <li>Form field labels & help text</li>
+                            <li>Error messages</li>
+                            <li>Empty states</li>
+                            <li>Tooltips & instructions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="examples">
+                    <div class="example bad">
+                        <p><strong>Instead of:</strong> "Error 404: Page not found"</p>
+                    </div>
+                    <div class="example good">
+                        <p><strong>Write:</strong> "We couldn't find that page. Let's get you back on track."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 17: Common UI/UX Mistakes -->
+            <section>
+                <h2>Common UI/UX Mistakes to Avoid</h2>
+                <div class="mistakes-grid">
+                    <div class="mistake-item">
+                        <h3>Overwhelming Users</h3>
+                        <p>Too many options, cluttered interfaces</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h3>Ignoring Conventions</h3>
+                        <p>Reinventing standard patterns unnecessarily</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h3>Prioritizing Aesthetics Over Usability</h3>
+                        <p>Pretty but confusing interfaces</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h3>Insufficient User Testing</h3>
+                        <p>Assuming instead of validating</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h3>Neglecting Edge Cases</h3>
+                        <p>Not designing for errors or empty states</p>
+                    </div>
+                    <div class="mistake-item">
+                        <h3>Poor Performance</h3>
+                        <p>Slow loading, janky animations</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 18: UI/UX Tools -->
+            <section>
+                <h2>Essential UI/UX Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-category">
+                        <h3>Design & Prototyping</h3>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>Sketch</li>
+                            <li>InVision</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <h3>User Research</h3>
+                        <ul>
+                            <li>UserTesting</li>
+                            <li>Hotjar</li>
+                            <li>Optimal Workshop</li>
+                            <li>Lookback</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <h3>Design Systems</h3>
+                        <ul>
+                            <li>Zeroheight</li>
+                            <li>Storybook</li>
+                            <li>Supernova</li>
+                            <li>Lingo</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <h3>Collaboration</h3>
+                        <ul>
+                            <li>Miro</li>
+                            <li>Notion</li>
+                            <li>Abstract</li>
+                            <li>Slack</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 19: Future Trends -->
+            <section>
+                <h2>Future UI/UX Trends</h2>
+                <div class="trends-grid">
+                    <div class="trend-item">
+                        <h3>Voice & Conversational UI</h3>
+                        <p>Voice assistants, chatbots & voice interfaces</p>
+                    </div>
+                    <div class="trend-item">
+                        <h3>AR & VR Experiences</h3>
+                        <p>Spatial design & immersive interfaces</p>
+                    </div>
+                    <div class="trend-item">
+                        <h3>AI-Powered Experiences</h3>
+                        <p>Personalization & adaptive interfaces</p>
+                    </div>
+                    <div class="trend-item">
+                        <h3>Micro-Animations & 3D Elements</h3>
+                        <p>Adding depth & interactivity</p>
+                    </div>
+                    <div class="trend-item">
+                        <h3>Dark Mode & Color Schemes</h3>
+                        <p>User preference & adaptable themes</p>
+                    </div>
+                    <div class="trend-item">
+                        <h3>Ethical Design</h3>
+                        <p>Transparency, privacy & digital wellbeing</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 20: Resources & Thank You -->
+            <section class="final-slide">
+                <h2>Resources & Further Learning</h2>
+                <div class="resources-grid">
+                    <div class="resource-item">
+                        <h3>Books</h3>
+                        <ul>
+                            <li>Don't Make Me Think by Steve Krug</li>
+                            <li>The Design of Everyday Things by Don Norman</li>
+                            <li>Atomic Design by Brad Frost</li>
+                        </ul>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Online Resources</h3>
+                        <ul>
+                            <li>Nielsen Norman Group</li>
+                            <li>A List Apart</li>
+                            <li>Smashing Magazine</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="thank-you">
+                    <h2>Thank You!</h2>
+                    <p>Questions?</p>
+                </div>
+            </section>
         </div>
-      </section>
-      
-      <!-- SLIDE 15: Content Strategy -->
-      <section>
-        <h2>Content Strategy</h2>
-        
-        <div class="principle">
-          <h3>Clear Hierarchy</h3>
-          <p>Structure content with clear headings and scannable sections.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Concise Writing</h3>
-          <p>Use plain language, active voice, and eliminate fluff.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Meaningful Labels</h3>
-          <p>Buttons and links should clearly communicate their purpose.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Progressive Disclosure</h3>
-          <p>Reveal information progressively to avoid overwhelming users.</p>
-        </div>
-        
-        <p class="text-center">Content is a critical part of UX design — not an afterthought.</p>
-      </section>
-      
-      <!-- SLIDE 16: The UX Design Process -->
-      <section>
-        <h2>The UX Design Process</h2>
-        
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker">1</div>
-            <div class="timeline-content">
-              <h4>Research & Discovery</h4>
-              <p>Understand user needs, business goals, and technical constraints.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">2</div>
-            <div class="timeline-content">
-              <h4>Information Architecture</h4>
-              <p>Organize content and functionality in a logical structure.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">3</div>
-            <div class="timeline-content">
-              <h4>Wireframing & Prototyping</h4>
-              <p>Create low to high-fidelity mockups to test concepts.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">4</div>
-            <div class="timeline-content">
-              <h4>User Testing</h4>
-              <p>Validate designs with real users throughout the process.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-marker">5</div>
-            <div class="timeline-content">
-              <h4>Visual Design & Implementation</h4>
-              <p>Apply visual styling and prepare for development.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 17: Design Systems -->
-      <section>
-        <h2>Design Systems</h2>
-        <p>The key to scalable, consistent experiences</p>
-        
-        <div class="grid">
-          <div class="card">
-            <h4>Component Libraries</h4>
-            <p>Reusable UI elements with defined behaviors and styles.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Design Patterns</h4>
-            <p>Standardized solutions to common UX problems.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Style Guides</h4>
-            <p>Visual rules for colors, typography, spacing, and more.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Documentation</h4>
-            <p>Clear guidelines on when and how to use components.</p>
-          </div>
-        </div>
-        
-        <p class="text-center">A good design system creates <span class="highlight">cohesion at scale</span> across products and teams.</p>
-      </section>
-      
-      <!-- SLIDE 18: Analytics & Measurement -->
-      <section>
-        <h2>Analytics & Measurement</h2>
-        
-        <div class="principle">
-          <h3>Define Key Metrics</h3>
-          <p>Identify what success looks like before implementing changes.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Quantitative Data</h3>
-          <p>Track user behavior through analytics (clicks, conversion rates, engagement).</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Qualitative Feedback</h3>
-          <p>Gather direct user feedback through surveys, interviews, and usability tests.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Iterative Improvement</h3>
-          <p>Use data to drive continuous design refinements.</p>
-        </div>
-        
-        <p class="text-center">Good UX design is data-informed, not just based on opinion or aesthetics.</p>
-      </section>
-      
-      <!-- SLIDE 19: Current Trends -->
-      <section>
-        <h2>Current UI/UX Trends</h2>
-        
-        <div class="grid">
-          <div class="card">
-            <h4>Dark Mode</h4>
-            <p>Reduced eye strain and battery consumption with proper implementation.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Voice UI</h4>
-            <p>Designing for conversation and multimodal interfaces.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Micro-animations</h4>
-            <p>Subtle movements that provide feedback and delight.</p>
-          </div>
-          
-          <div class="card">
-            <h4>3D Elements</h4>
-            <p>Adding depth and immersion when used appropriately.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Design for AI</h4>
-            <p>Creating interfaces that work well with AI-powered features.</p>
-          </div>
-          
-          <div class="card">
-            <h4>Ethical Design</h4>
-            <p>Prioritizing user well-being over engagement metrics.</p>
-          </div>
-        </div>
-      </section>
-      
-      <!-- SLIDE 20: Conclusion -->
-      <section class="text-center">
-        <h2>Remember</h2>
-        <div class="principle">
-          <h3>Design is Problem-Solving</h3>
-          <p>The goal is to create products that are useful, usable, and delightful.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Users Come First</h3>
-          <p>Always prioritize user needs over technical constraints or business preferences.</p>
-        </div>
-        
-        <div class="principle">
-          <h3>Design is Iterative</h3>
-          <p>Great products evolve through continuous testing and refinement.</p>
-        </div>
-        
-        <h3 class="highlight">Thank You!</h3>
-        <p>Questions?</p>
-      </section>
-      
     </div>
-  </div>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js"></script>
-  <script>
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      center: false,
-      hash: true,
-      transition: 'slide',
-      dependencies: []
-    });
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            transition: 'slide',
+            // Optional libraries
+            dependencies: [
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom-js/zoom.min.js', async: true }
+            ]
+        });
+    </script>
 </body>
 </html>
