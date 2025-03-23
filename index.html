@@ -1,293 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern UI/UX Design: Principles & Best Practices</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="presentation-style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Best Practices</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background elements -->
-    <div class="noise-bg"></div>
-    <div class="grid-bg"></div>
-    
-    <div class="reveal">
-        <div class="slides">
-            <!-- Slide 1: Title -->
-            <section class="title-slide">
-                <div class="title-glow"></div>
-                <h1 class="title-purple">Modern UI/UX Design</h1>
-                <h3>Principles & Best Practices</h3>
-                <p class="author">Your Name</p>
-                <p class="date">March 2025</p>
-            </section>
-
-            <!-- Slide 2: Core UI/UX Principles -->
-            <section>
-                <h2 class="section-title">Core UI/UX Principles</h2>
-                <div class="principle-cards">
-                    <div class="card card-blue glow-hover">
-                        <div class="card-icon">C</div>
-                        <h3>Clarity</h3>
-                        <p>Intuitive interfaces with clear visual hierarchy that guide users naturally</p>
-                    </div>
-                    <div class="card card-purple glow-hover">
-                        <div class="card-icon">C</div>
-                        <h3>Consistency</h3>
-                        <p>Similar elements behave similarly, creating predictable patterns</p>
-                    </div>
-                    <div class="card card-orange glow-hover">
-                        <div class="card-icon">F</div>
-                        <h3>Feedback</h3>
-                        <p>Clear indication when actions are successful or require attention</p>
-                    </div>
-                    <div class="card card-green glow-hover">
-                        <div class="card-icon">A</div>
-                        <h3>Accessibility</h3>
-                        <p>Design for all users regardless of ability or context of use</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 3: UI vs UX Comparison -->
-            <section>
-                <h2 class="section-title">UI vs UX: Understanding the Difference</h2>
-                <div class="two-columns">
-                    <div class="ui-section glow-hover">
-                        <h3>UI Design</h3>
-                        <p>The visual elements users interact with</p>
-                        <ul>
-                            <li>Buttons, menus, typography</li>
-                            <li>Color schemes & visual style</li>
-                            <li>Layout & composition</li>
-                            <li>Responsive design</li>
-                        </ul>
-                    </div>
-                    <div class="ux-section glow-hover">
-                        <h3>UX Design</h3>
-                        <p>The overall experience & journey</p>
-                        <ul>
-                            <li>User research & personas</li>
-                            <li>Information architecture</li>
-                            <li>User flows & journey mapping</li>
-                            <li>Usability & accessibility</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 4: DOs and DON'Ts with Explanations -->
-            <section>
-                <h2 class="section-title">UI Design: DOs and DON'Ts</h2>
-                <div class="comparison-container">
-                    <div class="do-side">
-                        <h3>DO</h3>
-                        <div class="do-example glow-hover">
-                            <p>Use clear visual hierarchy</p>
-                        </div>
-                    </div>
-                    <div class="comparison-explanation">
-                        <p>Guide users through content with size, color, and spacing to indicate importance</p>
-                    </div>
-                    <div class="dont-side">
-                        <h3>DON'T</h3>
-                        <div class="dont-example glow-hover">
-                            <p>Create visually flat interfaces</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comparison-container">
-                    <div class="do-side">
-                        <div class="do-example glow-hover">
-                            <p>Design with sufficient contrast</p>
-                        </div>
-                    </div>
-                    <div class="comparison-explanation">
-                        <p>Maintain at least 4.5:1 contrast ratio between text and background</p>
-                    </div>
-                    <div class="dont-side">
-                        <div class="dont-example glow-hover">
-                            <p>Use low contrast elements</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comparison-container">
-                    <div class="do-side">
-                        <div class="do-example glow-hover">
-                            <p>Create consistent interactions</p>
-                        </div>
-                    </div>
-                    <div class="comparison-explanation">
-                        <p>Similar elements should respond in predictable ways</p>
-                    </div>
-                    <div class="dont-side">
-                        <div class="dont-example glow-hover">
-                            <p>Reinvent standard patterns</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 5: UX Research Methods -->
-            <section>
-                <h2 class="section-title">UX Research Methods</h2>
-                <div class="methods-grid">
-                    <div class="method-card card-blue glow-hover">
-                        <h3>User Interviews</h3>
-                        <p>One-on-one conversations to understand user needs, behaviors, and pain points</p>
-                        <div class="method-tag">Qualitative</div>
-                    </div>
-                    <div class="method-card card-purple glow-hover">
-                        <h3>Usability Testing</h3>
-                        <p>Observing users as they complete tasks to identify usability issues</p>
-                        <div class="method-tag">Qualitative</div>
-                    </div>
-                    <div class="method-card card-orange glow-hover">
-                        <h3>Analytics</h3>
-                        <p>Collecting quantitative data about user behavior on existing products</p>
-                        <div class="method-tag">Quantitative</div>
-                    </div>
-                    <div class="method-card card-green glow-hover">
-                        <h3>Surveys</h3>
-                        <p>Structured questionnaires to gather feedback from many users</p>
-                        <div class="method-tag">Mixed</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 6: Design Process Flow -->
-            <section>
-                <h2 class="section-title">Design Process</h2>
-                <div class="process-flow">
-                    <div class="process-card card-blue pulse-glow">
-                        <div class="process-number">01</div>
-                        <h3>Research</h3>
-                        <p>Understand user needs, business goals and technical constraints</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-card card-purple pulse-glow">
-                        <div class="process-number">02</div>
-                        <h3>Define</h3>
-                        <p>Create user flows, information architecture and requirements</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-card card-orange pulse-glow">
-                        <div class="process-number">03</div>
-                        <h3>Ideate</h3>
-                        <p>Brainstorm solutions, sketching and wireframing concepts</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-card card-green pulse-glow">
-                        <div class="process-number">04</div>
-                        <h3>Test & Iterate</h3>
-                        <p>Validate designs with users and refine based on feedback</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 7: Accessibility Principles -->
-            <section>
-                <h2 class="section-title">Accessibility Principles</h2>
-                <div class="a11y-principles">
-                    <div class="a11y-item glow-hover">
-                        <h3>Perceivable</h3>
-                        <ul>
-                            <li>Alt text for images</li>
-                            <li>Color contrast (4.5:1 minimum)</li>
-                            <li>Text resizing without breaking layout</li>
-                        </ul>
-                    </div>
-                    <div class="a11y-item glow-hover">
-                        <h3>Operable</h3>
-                        <ul>
-                            <li>Keyboard navigation</li>
-                            <li>Sufficient time to read content</li>
-                            <li>No flashing content</li>
-                        </ul>
-                    </div>
-                    <div class="a11y-item glow-hover">
-                        <h3>Understandable</h3>
-                        <ul>
-                            <li>Clear labels and instructions</li>
-                            <li>Consistent navigation</li>
-                            <li>Error prevention & suggestions</li>
-                        </ul>
-                    </div>
-                    <div class="a11y-item glow-hover">
-                        <h3>Robust</h3>
-                        <ul>
-                            <li>Compatible with assistive technologies</li>
-                            <li>Valid, semantic HTML</li>
-                            <li>ARIA when necessary</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 8: Thank You -->
-            <section class="final-slide">
-                <div class="thank-you-glow"></div>
-                <h1 class="thank-you-title">Thank You!</h1>
-                <h3 class="fade-in-up">Questions?</h3>
-                <p class="author">Your Name</p>
-                <p class="date">youremail@example.com</p>
-            </section>
+  <div class="reveal">
+    <div class="slides">
+      
+      <!-- Title Slide -->
+      <section data-background-class="title-gradient">
+        <div class="title-container">
+          <div class="title-content">
+            <h1 class="gradient-text">UI/UX Best Practices</h1>
+            <div class="title-divider"></div>
+            <h3 class="subtitle">Creating Intuitive and Beautiful Interfaces</h3>
+            <p class="accent date">March 2025</p>
+          </div>
+          <div class="scroll-indicator">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z" fill="white"/>
+            </svg>
+          </div>
         </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom/zoom.min.js"></script>
-    <script>
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: false,
-            width: '100%',
-            height: '100%',
-            margin: 0,
-            minScale: 0.2,
-            maxScale: 1.5,
-            transition: 'slide',
-            // Essential configuration for fluid display
-            hash: true,
-            slideNumber: true,
-            touch: true,
-            // Auto-animate settings
-            autoAnimateEasing: 'cubic-bezier(0.16, 1, 0.3, 1)',
-            autoAnimateDuration: 0.8,
-            autoAnimateUnmatched: false,
-            // Enable plugins
-            plugins: [ RevealZoom ],
-            // Important for dark theme
-            backgroundTransition: 'fade',
-            // Scale to fit all content
-            scale: 0.85,
-            // Important - prevents content from being cut off
-            keyboard: true,
-            overview: true,
-            // Allow text to be selected
-            mouseWheel: false
-        });
+      </section>
+      
+      <!-- Introduction -->
+      <section>
+        <h2>The Importance of Good UI/UX</h2>
+        <ul>
+          <li>Increases user engagement</li>
+          <li>Reduces friction and frustration</li>
+          <li>Builds trust in your product</li>
+          <li>Differentiates from competitors</li>
+          <li>Improves conversion rates</li>
+        </ul>
+        <div class="highlight-box">
+          <p>"Good design is obvious. Great design is transparent."</p>
+        </div>
+      </section>
+      
+      <!-- Color Psychology -->
+      <section>
+        <h2>Using the <span class="accent">right</span> colors</h2>
+        <p>Learn color psychology. Use colors wisely and with attention.</p>
         
-        // Animation for slide content with staggered effect
-        Reveal.addEventListener('slidechanged', function(event) {
-            const currentSlide = event.currentSlide;
-            
-            // Add staggered animation for elements
-            const elements = currentSlide.querySelectorAll('.card, .ui-section, .ux-section, .a11y-item, .method-card, .process-card, .do-example, .dont-example, .comparison-explanation, h1, h2, h3, p, ul');
-            
-            elements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.classList.add('animated');
-                }, 100 + (index * 80)); // Staggered delay
-            });
-        });
-    </script>
+        <div class="example-container">
+          <div class="example good">
+            <div class="example-label good">DO</div>
+            <div class="button-container">
+              <div class="button primary">Accept</div>
+              <div class="button secondary">Refuse</div>
+            </div>
+            <p class="center">Clear contrast, proper hierarchy</p>
+          </div>
+          <div class="example bad">
+            <div class="example-label bad">DON'T</div>
+            <div class="button-container">
+              <div class="button error-button">Accept</div>
+              <div class="button success-button">Refuse</div>
+            </div>
+            <p class="center">Confusing color semantics</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Form Fields -->
+      <section>
+        <h2>Don't slice data fields</h2>
+        <p>Do not slice fields when asking for a full name, phone number or date of birth. Sliced fields force the user to make additional taps to move to the next field.</p>
+        
+        <div class="example-container">
+          <div class="example good">
+            <div class="example-label good">DO</div>
+            <div class="form-field correct">
+              <input type="text" placeholder="Full Name" />
+            </div>
+            <div class="form-field correct">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <p>Single fields are easier to complete</p>
+          </div>
+          <div class="example bad">
+            <div class="example-label bad">DON'T</div>
+            <div class="split-fields">
+              <div class="form-field error half">
+                <input type="text" placeholder="First Name" />
+              </div>
+              <div class="form-field error half">
+                <input type="text" placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="split-fields">
+              <div class="form-field error third">
+                <input type="tel" placeholder="Area" />
+              </div>
+              <div class="form-field error third">
+                <input type="tel" placeholder="Prefix" />
+              </div>
+              <div class="form-field error third">
+                <input type="tel" placeholder="Line" />
+              </div>
+            </div>
+            <p>Multiple fields create unnecessary friction</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Feedback and Confirmation -->
+      <section>
+        <h2>Provide Clear <span class="accent">Feedback</span></h2>
+        <p>Users should always know the status of their actions</p>
+        
+        <div class="example-container">
+          <div class="example good">
+            <div class="example-label good">DO</div>
+            <div class="center feedback-container">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#30D158"/>
+              </svg>
+              <p class="success">Payment Successful</p>
+              <p>Your order #12345 has been confirmed</p>
+            </div>
+          </div>
+          <div class="example bad">
+            <div class="example-label bad">DON'T</div>
+            <div class="center feedback-container">
+              <p>Order Status</p>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+              <p class="status-text">Processing...</p>
+            </div>
+            <p>Vague feedback leaves users uncertain</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Accessibility -->
+      <section>
+        <h2><span class="accent">Accessibility</span> Matters</h2>
+        <div class="container">
+          <div class="column do">
+            <h3 class="success">DO</h3>
+            <ul>
+              <li>Use sufficient color contrast</li>
+              <li>Support screen readers</li>
+              <li>Provide text alternatives for images</li>
+              <li>Design for keyboard navigation</li>
+              <li>Make touch targets adequately sized</li>
+            </ul>
+          </div>
+          <div class="column dont">
+            <h3 class="error">DON'T</h3>
+            <ul>
+              <li>Rely solely on color to convey information</li>
+              <li>Use tiny text or fonts below 16px</li>
+              <li>Create interfaces that require precision movements</li>
+              <li>Autohide critical navigation</li>
+              <li>Ignore accessibility guidelines</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Loading States -->
+      <section>
+        <h2>Handle <span class="accent">Loading States</span> Elegantly</h2>
+        <p>Never leave users wondering what's happening</p>
+        
+        <div class="example-container">
+          <div class="example good">
+            <div class="example-label good">DO</div>
+            <div class="center feedback-container">
+              <div class="spinner"></div>
+              <p>Loading your content...</p>
+              <div class="button secondary">Cancel</div>
+            </div>
+          </div>
+          <div class="example bad">
+            <div class="example-label bad">DON'T</div>
+            <div class="center feedback-container vague">
+              <p>Please wait...</p>
+            </div>
+            <p>No visual indicator or control options</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Mobile Design -->
+      <section>
+        <h2>Mobile-First <span class="accent">Design</span></h2>
+        <div class="container">
+          <div class="column do">
+            <h3 class="success">DO</h3>
+            <ul>
+              <li>Design for thumb zones</li>
+              <li>Prioritize content ruthlessly</li>
+              <li>Use responsive layouts</li>
+              <li>Test on actual devices</li>
+              <li>Consider offline states</li>
+            </ul>
+          </div>
+          <div class="column dont">
+            <h3 class="error">DON'T</h3>
+            <ul>
+              <li>Port desktop layouts directly</li>
+              <li>Use hover-dependent interactions</li>
+              <li>Create tiny touch targets</li>
+              <li>Ignore device capabilities</li>
+              <li>Forget about performance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Thank You -->
+      <section data-background-class="title-gradient">
+        <h1 class="gradient-text">Thank You</h1>
+        <p>Questions?</p>
+      </section>
+      
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      transition: 'slide',
+      backgroundTransition: 'fade'
+    });
+  </script>
 </body>
 </html>
