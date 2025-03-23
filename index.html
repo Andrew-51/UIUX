@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern UI/UX Design: Principles & Best Practices</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/night.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="presentation-style.css">
 </head>
 <body>
+    <!-- Background animation container -->
+    <div class="noise-bg"></div>
+    
     <div class="reveal">
         <div class="slides">
             <!-- Slide 1: Title -->
             <section class="title-slide">
-                <h1 class="animate-trigger">Modern UI/UX Design</h1>
-                <h3 class="animate-trigger">Principles & Best Practices</h3>
-                <p class="author animate-trigger">Your Name</p>
-                <p class="date animate-trigger">March 2025</p>
+                <div class="title-glow"></div>
+                <h1>Modern UI/UX Design</h1>
+                <h3>Principles & Best Practices</h3>
+                <p class="author">Your Name</p>
+                <p class="date">March 2025</p>
             </section>
 
             <!-- Slide 2: Introduction -->
             <section>
-                <h2 class="animate-trigger">What We'll Cover</h2>
+                <h2>What We'll Cover</h2>
                 <div class="two-columns">
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <ul>
                             <li>UI vs UX: Understanding the difference</li>
                             <li>Core principles of good design</li>
@@ -33,7 +37,7 @@
                             <li>Wireframing & prototyping</li>
                         </ul>
                     </div>
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <ul>
                             <li>Visual design principles</li>
                             <li>Accessibility considerations</li>
@@ -47,9 +51,9 @@
 
             <!-- Slide 3: UI vs UX -->
             <section>
-                <h2 class="animate-trigger">UI vs UX: What's the Difference?</h2>
+                <h2>UI vs UX: What's the Difference?</h2>
                 <div class="two-columns">
-                    <div class="ui-section animate-trigger">
+                    <div class="ui-section">
                         <h3>UI Design</h3>
                         <p>The visual elements users interact with</p>
                         <ul>
@@ -59,7 +63,7 @@
                             <li>Responsive design</li>
                         </ul>
                     </div>
-                    <div class="ux-section animate-trigger">
+                    <div class="ux-section">
                         <h3>UX Design</h3>
                         <p>The overall experience & journey</p>
                         <ul>
@@ -74,8 +78,8 @@
 
             <!-- Slide 4: Core Principles -->
             <section>
-                <h2 class="animate-trigger">Core Principles of Good Design</h2>
-                <ul class="principles-list animate-trigger">
+                <h2>Core Principles of Good Design</h2>
+                <ul class="principles-list">
                     <li><strong>Clarity:</strong> Design should be intuitive with clear visual hierarchy</li>
                     <li><strong>Consistency:</strong> Similar elements should behave similarly</li>
                     <li><strong>Feedback:</strong> Users should know when actions are successful</li>
@@ -83,16 +87,16 @@
                     <li><strong>Forgiveness:</strong> Allow users to undo mistakes easily</li>
                     <li><strong>Accessibility:</strong> Design for all users, regardless of ability</li>
                 </ul>
-                <div class="image-placeholder animate-trigger">
+                <div class="image-placeholder">
                     <p>[Image: Visual representation of design principles]</p>
                 </div>
             </section>
 
             <!-- Slide 5: User Research -->
             <section>
-                <h2 class="animate-trigger">User Research: Know Your Audience</h2>
+                <h2>User Research: Know Your Audience</h2>
                 <div class="two-columns">
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <h3>Research Methods</h3>
                         <ul>
                             <li>User interviews</li>
@@ -102,7 +106,7 @@
                             <li>Analytics & heatmaps</li>
                         </ul>
                     </div>
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <h3>Deliverables</h3>
                         <ul>
                             <li>User personas</li>
@@ -119,9 +123,9 @@
 
             <!-- Slide 6: UX DOs and DON'Ts -->
             <section>
-                <h2 class="animate-trigger">UX: DOs and DON'Ts</h2>
+                <h2>UX: DOs and DON'Ts</h2>
                 <div class="two-columns">
-                    <div class="dos animate-trigger">
+                    <div class="dos">
                         <h3>DO</h3>
                         <ul>
                             <li>Conduct user research before designing</li>
@@ -131,7 +135,7 @@
                             <li>Use data to inform design decisions</li>
                         </ul>
                     </div>
-                    <div class="donts animate-trigger">
+                    <div class="donts">
                         <h3>DON'T</h3>
                         <ul>
                             <li>Design based on assumptions alone</li>
@@ -146,36 +150,36 @@
 
             <!-- Slide 7: Information Architecture -->
             <section>
-                <h2 class="animate-trigger">Information Architecture</h2>
-                <p class="animate-trigger">Organizing & structuring content for intuitive navigation</p>
+                <h2>Information Architecture</h2>
+                <p>Organizing & structuring content for intuitive navigation</p>
                 <div class="ia-principles">
-                    <div class="ia-item animate-trigger">
+                    <div class="ia-item">
                         <h3>Hierarchy</h3>
                         <p>Structure content by importance</p>
                     </div>
-                    <div class="ia-item animate-trigger">
+                    <div class="ia-item">
                         <h3>Navigation</h3>
                         <p>Help users find what they need</p>
                     </div>
-                    <div class="ia-item animate-trigger">
+                    <div class="ia-item">
                         <h3>Labeling</h3>
                         <p>Clear, consistent terminology</p>
                     </div>
-                    <div class="ia-item animate-trigger">
+                    <div class="ia-item">
                         <h3>Organization</h3>
                         <p>Logical grouping of content</p>
                     </div>
                 </div>
-                <div class="image-placeholder animate-trigger">
+                <div class="image-placeholder">
                     <p>[Image: Site map example]</p>
                 </div>
             </section>
 
             <!-- Slide 8: Wireframing & Prototyping -->
             <section>
-                <h2 class="animate-trigger">Wireframing & Prototyping</h2>
+                <h2>Wireframing & Prototyping</h2>
                 <div class="two-columns">
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <h3>Wireframes</h3>
                         <ul>
                             <li>Low-fidelity blueprints</li>
@@ -187,7 +191,7 @@
                             <p>[Image: Example wireframe]</p>
                         </div>
                     </div>
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <h3>Prototypes</h3>
                         <ul>
                             <li>Interactive mockups</li>
@@ -204,9 +208,9 @@
 
             <!-- Slide 9: UI DOs and DON'Ts -->
             <section>
-                <h2 class="animate-trigger">UI: DOs and DON'Ts</h2>
+                <h2>UI: DOs and DON'Ts</h2>
                 <div class="two-columns">
-                    <div class="dos animate-trigger">
+                    <div class="dos">
                         <h3>DO</h3>
                         <ul>
                             <li>Maintain visual hierarchy & clear focal points</li>
@@ -216,7 +220,7 @@
                             <li>Make interactive elements obvious</li>
                         </ul>
                     </div>
-                    <div class="donts animate-trigger">
+                    <div class="donts">
                         <h3>DON'T</h3>
                         <ul>
                             <li>Overwhelm with too many colors or fonts</li>
@@ -227,37 +231,37 @@
                         </ul>
                     </div>
                 </div>
-                <div class="image-placeholder animate-trigger">
+                <div class="image-placeholder">
                     <p>[Image: Good vs. bad UI examples]</p>
                 </div>
             </section>
 
             <!-- Slide 10: Visual Design Principles -->
             <section>
-                <h2 class="animate-trigger">Visual Design Principles</h2>
+                <h2>Visual Design Principles</h2>
                 <div class="visual-principles">
-                    <div class="visual-item animate-trigger">
+                    <div class="visual-item">
                         <h3>Color</h3>
                         <p>Purpose-driven, accessible, consistent</p>
                         <div class="image-placeholder mini">
                             <p>[Color palette]</p>
                         </div>
                     </div>
-                    <div class="visual-item animate-trigger">
+                    <div class="visual-item">
                         <h3>Typography</h3>
                         <p>Readable, hierarchical, limited fonts</p>
                         <div class="image-placeholder mini">
                             <p>[Type system]</p>
                         </div>
                     </div>
-                    <div class="visual-item animate-trigger">
+                    <div class="visual-item">
                         <h3>Layout</h3>
                         <p>Grid-based, balanced, purposeful</p>
                         <div class="image-placeholder mini">
                             <p>[Grid example]</p>
                         </div>
                     </div>
-                    <div class="visual-item animate-trigger">
+                    <div class="visual-item">
                         <h3>Imagery</h3>
                         <p>Purposeful, consistent style, high-quality</p>
                         <div class="image-placeholder mini">
@@ -269,9 +273,9 @@
 
             <!-- Slide 11: Accessibility -->
             <section>
-                <h2 class="animate-trigger">Designing for Accessibility</h2>
+                <h2>Designing for Accessibility</h2>
                 <div class="a11y-principles">
-                    <div class="a11y-item animate-trigger">
+                    <div class="a11y-item">
                         <h3>Perceivable</h3>
                         <ul>
                             <li>Alt text for images</li>
@@ -279,7 +283,7 @@
                             <li>Text resizing without breaking layout</li>
                         </ul>
                     </div>
-                    <div class="a11y-item animate-trigger">
+                    <div class="a11y-item">
                         <h3>Operable</h3>
                         <ul>
                             <li>Keyboard navigation</li>
@@ -287,7 +291,7 @@
                             <li>No flashing content</li>
                         </ul>
                     </div>
-                    <div class="a11y-item animate-trigger">
+                    <div class="a11y-item">
                         <h3>Understandable</h3>
                         <ul>
                             <li>Clear labels and instructions</li>
@@ -295,7 +299,7 @@
                             <li>Error prevention & suggestions</li>
                         </ul>
                     </div>
-                    <div class="a11y-item animate-trigger">
+                    <div class="a11y-item">
                         <h3>Robust</h3>
                         <ul>
                             <li>Compatible with assistive technologies</li>
@@ -308,9 +312,9 @@
 
             <!-- Slide 12: Mobile-First Design -->
             <section>
-                <h2 class="animate-trigger">Mobile-First Design</h2>
+                <h2>Mobile-First Design</h2>
                 <div class="two-columns">
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <h3>Why Mobile-First?</h3>
                         <ul>
                             <li>Forces focus on core content</li>
@@ -319,7 +323,7 @@
                             <li>Matches modern user behavior</li>
                         </ul>
                     </div>
-                    <div class="animate-trigger">
+                    <div class="content-card">
                         <h3>Best Practices</h3>
                         <ul>
                             <li>Prioritize content over decoration</li>
@@ -334,40 +338,37 @@
                 </div>
             </section>
 
-            <!-- Slides 13-20 follow the same pattern... -->
-            <!-- For brevity, I'll include just a few more slides -->
-
             <!-- Slide 13: Responsive Design -->
             <section>
-                <h2 class="animate-trigger">Responsive Design Principles</h2>
+                <h2>Responsive Design Principles</h2>
                 <div class="responsive-principles">
-                    <div class="responsive-item animate-trigger">
+                    <div class="responsive-item">
                         <h3>Fluid Grids</h3>
                         <p>Use relative units (%, em, rem) instead of fixed pixels</p>
                     </div>
-                    <div class="responsive-item animate-trigger">
+                    <div class="responsive-item">
                         <h3>Flexible Images</h3>
                         <p>Images that scale within containing elements</p>
                     </div>
-                    <div class="responsive-item animate-trigger">
+                    <div class="responsive-item">
                         <h3>Media Queries</h3>
                         <p>Adapt layout based on device capabilities</p>
                     </div>
-                    <div class="responsive-item animate-trigger">
+                    <div class="responsive-item">
                         <h3>Breakpoints</h3>
                         <p>Based on content needs, not specific devices</p>
                     </div>
                 </div>
-                <div class="image-placeholder animate-trigger">
+                <div class="image-placeholder">
                     <p>[Image: Responsive design example across devices]</p>
                 </div>
             </section>
 
             <!-- Slide 20: Resources & Thank You -->
             <section class="final-slide">
-                <h2 class="animate-trigger">Resources & Further Learning</h2>
+                <h2>Resources & Further Learning</h2>
                 <div class="resources-grid">
-                    <div class="resource-item animate-trigger">
+                    <div class="resource-item">
                         <h3>Books</h3>
                         <ul>
                             <li>Don't Make Me Think by Steve Krug</li>
@@ -375,7 +376,7 @@
                             <li>Atomic Design by Brad Frost</li>
                         </ul>
                     </div>
-                    <div class="resource-item animate-trigger">
+                    <div class="resource-item">
                         <h3>Online Resources</h3>
                         <ul>
                             <li>Nielsen Norman Group</li>
@@ -429,15 +430,18 @@
             mouseWheel: false
         });
         
-        // Animation trigger for slide content
+        // Animation for slide content - modified for neon effects
         Reveal.addEventListener('slidechanged', function(event) {
             const currentSlide = event.currentSlide;
-            // Reset and apply animation classes
-            setTimeout(() => {
-                currentSlide.querySelectorAll('.animate-trigger').forEach(el => {
+            
+            // Add staggered animation for elements
+            const elements = currentSlide.querySelectorAll('h1, h2, h3, p, ul, .content-card, .dos, .donts, .image-placeholder, .visual-item, .a11y-item, .responsive-item, .ds-item, .ia-item, .mistake-item, .resource-item');
+            
+            elements.forEach((el, index) => {
+                setTimeout(() => {
                     el.classList.add('animated');
-                });
-            }, 100);
+                }, 100 + (index * 100)); // Staggered delay
+            });
         });
     </script>
 </body>
