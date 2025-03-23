@@ -5,22 +5,295 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UI/UX Best Practices</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ============ CSS STYLES ============ */
+    
+    :root {
+      --bg-color: #0A0A0A;
+      --bg-darker: #050505;
+      --text-color: rgba(255, 255, 255, 0.9);
+      --accent-color: #0A84FF;
+      --accent-glow: 0 0 15px rgba(10, 132, 255, 0.5);
+      --success-color: #30D158;
+      --success-glow: 0 0 15px rgba(48, 209, 88, 0.5);
+      --error-color: #FF453A;
+      --error-glow: 0 0 15px rgba(255, 69, 58, 0.5);
+      --neutral-color: #8E8E93;
+    }
+    
+    /* Base styles */
+    body {
+      background-color: var(--bg-darker);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    .reveal {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    /* Typography */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6em;
+      text-transform: none;
+    }
+    
+    .reveal h1 {
+      font-size: 3.5em;
+      background: linear-gradient(90deg, #fff 20%, rgba(255,255,255,0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.2em;
+    }
+    
+    .reveal h2 {
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+    
+    .reveal h3 {
+      font-size: 1.8em;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+    
+    .reveal p {
+      line-height: 1.5;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    /* Lists */
+    .reveal ul {
+      list-style-type: none;
+      padding-left: 1em;
+    }
+    
+    .reveal li {
+      margin: 0.6em 0;
+      position: relative;
+      padding-left: 1.2em;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .reveal li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      box-shadow: var(--accent-glow);
+    }
+    
+    .reveal .do li:before {
+      background-color: var(--success-color);
+      box-shadow: var(--success-glow);
+    }
+    
+    .reveal .dont li:before {
+      background-color: var(--error-color);
+      box-shadow: var(--error-glow);
+    }
+    
+    /* Text styles */
+    .accent {
+      color: var(--accent-color);
+      text-shadow: var(--accent-glow);
+    }
+    
+    .success {
+      color: var(--success-color);
+      text-shadow: var(--success-glow);
+    }
+    
+    .error {
+      color: var(--error-color);
+      text-shadow: var(--error-glow);
+    }
+    
+    /* Layout */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .column {
+      flex: 1;
+      padding: 0 20px;
+    }
+    
+    .preview-container {
+      background: rgba(30, 30, 30, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    /* UI elements */
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      margin: 10px;
+      min-width: 150px;
+    }
+    
+    .button.primary {
+      background-color: var(--accent-color);
+      color: white;
+      box-shadow: var(--accent-glow);
+    }
+    
+    .button.secondary {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .form-field {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    .form-field input {
+      width: calc(100% - 24px);
+      padding: 12px;
+      background: rgba(30, 30, 30, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+    }
+    
+    .form-field.correct input {
+      border-color: var(--success-color);
+      box-shadow: var(--success-glow);
+    }
+    
+    .form-field.error input {
+      border-color: var(--error-color);
+      box-shadow: var(--error-glow);
+    }
+    
+    /* Alignment */
+    .right {
+      text-align: right;
+    }
+    
+    .center {
+      text-align: center;
+    }
+    
+    /* Boxes and containers */
+    .highlight-box {
+      background: rgba(10, 132, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--accent-color);
+      box-shadow: var(--accent-glow);
+      margin: 20px 0;
+    }
+    
+    .example-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 20px 0;
+    }
+    
+    .example {
+      flex: 1;
+      margin: 0 10px;
+      background: rgba(30, 30, 30, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 20px;
+      position: relative;
+    }
+    
+    .example.good {
+      border: 1px solid var(--success-color);
+      box-shadow: 0 0 10px rgba(48, 209, 88, 0.3);
+    }
+    
+    .example.bad {
+      border: 1px solid var(--error-color);
+      box-shadow: 0 0 10px rgba(255, 69, 58, 0.3);
+    }
+    
+    .example-label {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .example-label.good {
+      background-color: var(--success-color);
+      color: black;
+    }
+    
+    .example-label.bad {
+      background-color: var(--error-color);
+      color: white;
+    }
+    
+    /* Slide backgrounds */
+    .reveal .backgrounds .title-gradient {
+      background: radial-gradient(circle at center, rgba(10, 132, 255, 0.4) 0%, var(--bg-darker) 70%);
+    }
+    
+    .reveal .slide-background {
+      background-color: var(--bg-darker);
+    }
+    
+    .reveal .slides section {
+      background: linear-gradient(160deg, var(--bg-color) 0%, var(--bg-darker) 100%);
+      border-radius: 8px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      color: rgba(255,255,255,0.85);
+    }
+    
+    /* Animations */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
+  <!-- ============ HTML CONTENT ============ -->
+
   <div class="reveal">
     <div class="slides">
       
       <!-- Title Slide -->
       <section data-background-class="title-gradient">
-        <div class="title-container">
-          <div class="title-content">
-            <h1 class="gradient-text">UI/UX Best Practices</h1>
-            <div class="title-divider"></div>
-            <h3 class="subtitle">Creating Intuitive and Beautiful Interfaces</h3>
-            <p class="accent date">March 2025</p>
+        <div style="position: relative; height: 100%;">
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);">
+            <h1 style="font-size: 4em; margin-bottom: 0.3em; background: linear-gradient(90deg, #fff, rgba(255,255,255,0.8)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: none;">UI/UX Best Practices</h1>
+            <div style="width: 60px; height: 2px; background-color: var(--accent-color); margin: 30px auto; box-shadow: var(--accent-glow);"></div>
+            <h3 style="font-weight: 300; letter-spacing: 0.05em; color: rgba(255,255,255,0.8);">Creating Intuitive and Beautiful Interfaces</h3>
+            <p class="accent" style="margin-top: 40px; font-size: 1.2em; font-weight: 500;">March 2025</p>
           </div>
-          <div class="scroll-indicator">
+          <div style="position: absolute; bottom: 20px; right: 20px; opacity: 0.7;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z" fill="white"/>
             </svg>
@@ -51,7 +324,7 @@
         <div class="example-container">
           <div class="example good">
             <div class="example-label good">DO</div>
-            <div class="button-container">
+            <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
               <div class="button primary">Accept</div>
               <div class="button secondary">Refuse</div>
             </div>
@@ -59,9 +332,9 @@
           </div>
           <div class="example bad">
             <div class="example-label bad">DON'T</div>
-            <div class="button-container">
-              <div class="button error-button">Accept</div>
-              <div class="button success-button">Refuse</div>
+            <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+              <div class="button primary" style="background-color: var(--error-color); box-shadow: var(--error-glow);">Accept</div>
+              <div class="button primary" style="background-color: var(--success-color); box-shadow: var(--success-glow);">Refuse</div>
             </div>
             <p class="center">Confusing color semantics</p>
           </div>
@@ -86,22 +359,22 @@
           </div>
           <div class="example bad">
             <div class="example-label bad">DON'T</div>
-            <div class="split-fields">
-              <div class="form-field error half">
+            <div style="display: flex; justify-content: space-between;">
+              <div class="form-field error" style="width: 48%;">
                 <input type="text" placeholder="First Name" />
               </div>
-              <div class="form-field error half">
+              <div class="form-field error" style="width: 48%;">
                 <input type="text" placeholder="Last Name" />
               </div>
             </div>
-            <div class="split-fields">
-              <div class="form-field error third">
+            <div style="display: flex; justify-content: space-between;">
+              <div class="form-field error" style="width: 30%;">
                 <input type="tel" placeholder="Area" />
               </div>
-              <div class="form-field error third">
+              <div class="form-field error" style="width: 30%;">
                 <input type="tel" placeholder="Prefix" />
               </div>
-              <div class="form-field error third">
+              <div class="form-field error" style="width: 30%;">
                 <input type="tel" placeholder="Line" />
               </div>
             </div>
@@ -118,7 +391,7 @@
         <div class="example-container">
           <div class="example good">
             <div class="example-label good">DO</div>
-            <div class="center feedback-container">
+            <div class="center" style="margin: 20px 0;">
               <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#30D158"/>
               </svg>
@@ -128,12 +401,12 @@
           </div>
           <div class="example bad">
             <div class="example-label bad">DON'T</div>
-            <div class="center feedback-container">
+            <div class="center" style="margin: 20px 0;">
               <p>Order Status</p>
-              <div class="progress-bar">
-                <div class="progress-fill"></div>
+              <div style="width: 100%; height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden;">
+                <div style="width: 70%; height: 100%; background-color: var(--accent-color);"></div>
               </div>
-              <p class="status-text">Processing...</p>
+              <p style="color: var(--neutral-color); font-size: 14px;">Processing...</p>
             </div>
             <p>Vague feedback leaves users uncertain</p>
           </div>
@@ -175,15 +448,17 @@
         <div class="example-container">
           <div class="example good">
             <div class="example-label good">DO</div>
-            <div class="center feedback-container">
-              <div class="spinner"></div>
+            <div class="center" style="margin: 20px 0;">
+              <div style="display: inline-block; position: relative; width: 80px; height: 80px;">
+                <div style="position: absolute; width: 64px; height: 64px; margin: 8px; border: 6px solid #fff; border-radius: 50%; border-color: var(--accent-color) transparent transparent transparent; animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;"></div>
+              </div>
               <p>Loading your content...</p>
-              <div class="button secondary">Cancel</div>
+              <div class="button secondary" style="margin-top: 10px;">Cancel</div>
             </div>
           </div>
           <div class="example bad">
             <div class="example-label bad">DON'T</div>
-            <div class="center feedback-container vague">
+            <div class="center" style="margin: 20px 0; opacity: 0.5;">
               <p>Please wait...</p>
             </div>
             <p>No visual indicator or control options</p>
@@ -220,7 +495,7 @@
       
       <!-- Thank You -->
       <section data-background-class="title-gradient">
-        <h1 class="gradient-text">Thank You</h1>
+        <h1>Thank You</h1>
         <p>Questions?</p>
       </section>
       
