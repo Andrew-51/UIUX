@@ -259,9 +259,51 @@
       animation: pulse-light 8s infinite alternate ease-in-out;
     }
     
+    .spotlight::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 70%, rgba(48, 209, 88, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+      opacity: 0.7;
+      z-index: 1;
+      animation: pulse-light-secondary 12s infinite alternate-reverse ease-in-out;
+    }
+    
     @keyframes pulse-light {
       0%, 100% { opacity: 0.7; transform: scale(1); }
       50% { opacity: 0.9; transform: scale(1.1); }
+    }
+    
+    @keyframes pulse-light-secondary {
+      0%, 100% { opacity: 0.4; transform: scale(1.05); }
+      50% { opacity: 0.7; transform: scale(1.2); }
+    }
+    
+    .glowing-particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      box-shadow: 0 0 10px 2px var(--accent-color);
+      opacity: 0;
+      animation: float-up 15s infinite linear;
+    }
+    
+    @keyframes float-up {
+      0% { transform: translateY(100%) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.7; }
+      100% { transform: translateY(-100%) rotate(360deg); opacity: 0; }
     }
     
     .hero-container {
@@ -286,10 +328,28 @@
       background: linear-gradient(120deg, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.7) 70%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
-      text-shadow: none !important;
       letter-spacing: -0.03em !important;
       font-weight: 800 !important;
       text-align: left !important;
+      position: relative !important;
+      z-index: 2 !important;
+      transform: translateX(-100px) !important;
+      opacity: 0 !important;
+      animation: slide-in 1.2s forwards ease-out, glow-pulse 4s infinite alternate !important;
+    }
+    
+    .hero-title::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      background: linear-gradient(120deg, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.7) 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: blur(15px);
+      opacity: 0.7;
+      animation: glow-pulse 4s infinite alternate;
     }
     
     .hero-subtitle {
@@ -299,19 +359,59 @@
       background: linear-gradient(120deg, rgb(255, 255, 255) 40%, var(--accent-color) 90%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
-      text-shadow: none !important;
       letter-spacing: -0.03em !important;
       font-weight: 800 !important;
       text-align: left !important;
+      position: relative !important;
+      z-index: 2 !important;
+      transform: translateX(-100px) !important;
+      opacity: 0 !important;
+      animation: slide-in 1.2s 0.3s forwards ease-out, glow-pulse 4s infinite alternate !important;
+    }
+    
+    .hero-subtitle::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      background: linear-gradient(120deg, rgb(255, 255, 255) 40%, var(--accent-color) 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: blur(15px);
+      opacity: 0.7;
+      animation: glow-pulse 4s infinite alternate;
+    }
+    
+    @keyframes slide-in {
+      0% { transform: translateX(-100px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes glow-pulse {
+      0%, 100% { filter: blur(15px); opacity: 0.4; }
+      50% { filter: blur(20px); opacity: 0.7; }
     }
     
     .hero-divider {
-      width: 30%;
+      width: 0%;
       height: 4px;
       background: linear-gradient(90deg, var(--accent-color), rgba(10, 132, 255, 0.4));
       border-radius: 2px;
       margin: 30px 0;
       box-shadow: var(--accent-glow);
+      opacity: 0;
+      animation: grow-width 1.5s 0.7s forwards ease-out, glow-intense 3s infinite alternate;
+    }
+    
+    @keyframes grow-width {
+      0% { width: 0%; opacity: 0; }
+      100% { width: 30%; opacity: 1; }
+    }
+    
+    @keyframes glow-intense {
+      0%, 100% { box-shadow: 0 0 15px 2px rgba(10, 132, 255, 0.5); }
+      50% { box-shadow: 0 0 25px 4px rgba(10, 132, 255, 0.8); }
     }
     
     .tagline {
@@ -321,6 +421,14 @@
       margin: 15px 0 30px 0 !important;
       font-size: 2em !important;
       text-align: left !important;
+      opacity: 0 !important;
+      transform: translateY(20px) !important;
+      animation: fade-up 1s 1s forwards ease-out !important;
+    }
+    
+    @keyframes fade-up {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     
     .pill-badge {
@@ -334,6 +442,20 @@
       color: var(--accent-color);
       box-shadow: var(--accent-glow);
       margin-top: 20px;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: pop-in 0.5s 1.5s forwards cubic-bezier(0.17, 0.67, 0.83, 0.67), pulse-glow 3s 2s infinite alternate;
+    }
+    
+    @keyframes pop-in {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 15px 2px rgba(10, 132, 255, 0.5); }
+      50% { box-shadow: 0 0 25px 5px rgba(10, 132, 255, 0.8); }
     }
     
     .hero-emoji {
@@ -421,10 +543,30 @@
       <!-- Title Slide -->
       <section data-background-class="title-gradient" class="apple-style">
         <div class="spotlight"></div>
+        
+        <div class="glowing-particles">
+          <!-- Generated floating particles -->
+          <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+          <div class="particle" style="left: 25%; animation-delay: 3s;"></div>
+          <div class="particle" style="left: 40%; animation-delay: 5s;"></div>
+          <div class="particle" style="left: 60%; animation-delay: 2s;"></div>
+          <div class="particle" style="left: 75%; animation-delay: 7s;"></div>
+          <div class="particle" style="left: 85%; animation-delay: 1s;"></div>
+          <div class="particle" style="left: 15%; animation-delay: 8s;"></div>
+          <div class="particle" style="left: 45%; animation-delay: 4s;"></div>
+          <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
+          <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+          <div class="particle" style="left: 30%; animation-delay: 4.5s;"></div>
+          <div class="particle" style="left: 55%; animation-delay: 7.5s;"></div>
+          <div class="particle" style="left: 20%; animation-delay: 1.5s;"></div>
+          <div class="particle" style="left: 80%; animation-delay: 3.5s;"></div>
+          <div class="particle" style="left: 35%; animation-delay: 5.5s;"></div>
+        </div>
+        
         <div class="hero-container">
           <div class="hero-content">
-            <h1 class="hero-title">UI/UX</h1>
-            <h1 class="hero-subtitle">Best Practices</h1>
+            <h1 class="hero-title" data-text="UI/UX">UI/UX</h1>
+            <h1 class="hero-subtitle" data-text="Best Practices">Best Practices</h1>
             <div class="hero-divider"></div>
             <h3 class="tagline">Make interfaces that don't make users cry</h3>
             <div class="pill-badge">
