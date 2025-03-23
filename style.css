@@ -1,0 +1,239 @@
+/* Base styles */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #7c3aed;
+    --accent-color: #f97316;
+    --dark-color: #111827;
+    --light-color: #f8fafc;
+    --gray-color: #64748b;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --font-primary: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Montserrat', 'SF Pro Display', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.4em;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* Layouts */
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.two-columns > div {
+    flex: 1;
+}
+
+/* Lists */
+ul {
+    margin-left: 1em;
+    text-align: left;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+}
+
+.principles-list li {
+    margin-bottom: 0.8em;
+}
+
+/* Title Slide */
+.title-slide h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    color: var(--primary-color);
+}
+
+.title-slide h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.title-slide .author, 
+.title-slide .date {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: var(--gray-color);
+}
+
+/* UI vs UX Slide */
+.ui-section, .ux-section {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5em;
+}
+
+.ui-section {
+    border-top: 4px solid var(--primary-color);
+}
+
+.ux-section {
+    border-top: 4px solid var(--secondary-color);
+}
+
+.ui-section h3, .ux-section h3 {
+    margin-top: 0;
+}
+
+/* Dos and Donts */
+.dos, .donts {
+    background-color: #f8fafc;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+.dos {
+    border-top: 4px solid var(--success-color);
+}
+
+.dos h3 {
+    color: var(--success-color);
+}
+
+.donts {
+    border-top: 4px solid var(--error-color);
+}
+
+.donts h3 {
+    color: var(--error-color);
+}
+
+/* Image placeholders */
+.image-placeholder {
+    background-color: #e2e8f0;
+    padding: 2em;
+    border-radius: 6px;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.image-placeholder p {
+    color: var(--gray-color);
+    margin: 0;
+}
+
+.image-placeholder.mini {
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+/* Visual principles */
+.visual-principles, 
+.a11y-principles, 
+.responsive-principles,
+.design-system-components {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.visual-item, 
+.a11y-item, 
+.responsive-item,
+.ds-item {
+    background-color: #f8fafc;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.visual-item h3, 
+.a11y-item h3, 
+.responsive-item h3,
+.ds-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+/* Mistakes grid */
+.mistakes-grid,
+.tools-grid,
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.mistake-item,
+.tool-category,
+.trend-item {
+    background-color: #f8fafc;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mistake-item h3,
+.tool-category h3,
+.trend-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+/* Examples for UX Writing */
+.examples {
+    margin-top: 2em;
+}
+
+.example {
+    padding: 1em;
+    border-radius: 6px;
+    margin-bottom: 1em;
+}
+
+.example.bad {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-left: 3px solid var(--error-color);
+}
+
+.example.good {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid var(--success-color);
+}
+
+/* Resources & Final slide */
+.resources-grid {
+    display:
