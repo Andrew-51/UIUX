@@ -579,6 +579,186 @@
   </div>
 </section>
 
+      <!-- Navigation Patterns -->
+<section>
+  <h2>Intuitive <span class="accent">Navigation</span> Patterns</h2>
+  <p>Users should always know where they are and how to get where they want to go</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 10px; margin-bottom: 15px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+          <div style="font-weight: 600;">Home / Products / <span class="accent">Smart Devices</span></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="white"/>
+          </svg>
+        </div>
+        <div style="display: flex; margin-top: 15px;">
+          <div style="width: 25%; padding-right: 15px;">
+            <div style="background: rgba(10, 132, 255, 0.1); border-left: 3px solid var(--accent-color); padding: 10px;">
+              <p style="margin: 0; font-weight: 600;">Smart Devices</p>
+            </div>
+            <div style="padding: 10px; border-left: 3px solid transparent;">
+              <p style="margin: 0; opacity: 0.7;">Accessories</p>
+            </div>
+            <div style="padding: 10px; border-left: 3px solid transparent;">
+              <p style="margin: 0; opacity: 0.7;">Software</p>
+            </div>
+          </div>
+          <div style="width: 75%;">
+            <div style="height: 120px; background: rgba(255,255,255,0.05); border-radius: 8px;"></div>
+          </div>
+        </div>
+      </div>
+      <p>Clear hierarchy with breadcrumbs and visual cues</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 10px; margin-bottom: 15px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="white"/>
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="white"/>
+          </svg>
+        </div>
+        <div style="margin-top: 15px;">
+          <div style="height: 150px; background: rgba(255,255,255,0.05); border-radius: 8px;"></div>
+        </div>
+      </div>
+      <p>No context of location or content organization</p>
+    </div>
+  </div>
+</section>
+
+<!-- Microcopy & Error Messages -->
+<section>
+  <h2>Clear <span class="accent">Microcopy</span> & Error Messages</h2>
+  <p>Text should guide users and help them recover from mistakes</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div class="form-field correct">
+        <input type="password" placeholder="Password (8+ characters)" />
+      </div>
+      <div style="background: rgba(48, 209, 88, 0.1); border-radius: 4px; padding: 8px; margin: 10px 0; display: flex; align-items: center; font-size: 14px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#30D158"/>
+        </svg>
+        <span style="color: var(--success-color);">Password strength: Good</span>
+      </div>
+      <p style="font-size: 14px; margin-top: 5px;">Helpful, specific guidance</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div class="form-field error">
+        <input type="password" placeholder="Password" />
+      </div>
+      <div style="background: rgba(255, 69, 58, 0.1); border-radius: 4px; padding: 8px; margin: 10px 0; color: var(--error-color); font-size: 14px;">
+        Error 5228: Invalid input
+      </div>
+      <p style="font-size: 14px; margin-top: 5px;">Unclear, technical error message</p>
+    </div>
+  </div>
+</section>
+
+<!-- Visual Hierarchy -->
+<section>
+  <h2>Strong Visual <span class="accent">Hierarchy</span></h2>
+  <p>Guide users through content with clear visual priority</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <h3 style="font-size: 1.4em; margin-top: 0; margin-bottom: 15px;">Account Settings</h3>
+        <div style="font-size: 1.1em; font-weight: 500; margin-bottom: 10px; color: var(--accent-color);">Privacy</div>
+        <div style="margin-bottom: 15px; padding-left: 10px; border-left: 2px solid rgba(255,255,255,0.1);">
+          <div style="margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+            <span>Profile visibility</span>
+            <div style="width: 40px; height: 20px; background: var(--accent-color); border-radius: 10px; position: relative;">
+              <div style="position: absolute; right: 2px; top: 2px; width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Activity status</span>
+            <div style="width: 40px; height: 20px; background: rgba(255,255,255,0.2); border-radius: 10px; position: relative;">
+              <div style="position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="font-size: 1.1em; font-weight: 500; margin-bottom: 10px; color: var(--accent-color);">Notifications</div>
+        <div style="padding-left: 10px; border-left: 2px solid rgba(255,255,255,0.1);">
+          <div style="margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+            <span>Email alerts</span>
+            <div style="width: 40px; height: 20px; background: var(--accent-color); border-radius: 10px; position: relative;">
+              <div style="position: absolute; right: 2px; top: 2px; width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 14px; margin-top: 10px;">Clear grouping and visual weight</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div style="font-size: 1em; margin-bottom: 10px;">Account Settings</div>
+        <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <span>Profile visibility</span>
+          <div style="width: 40px; height: 20px; background: var(--accent-color); border-radius: 10px; position: relative;">
+            <div style="position: absolute; right: 2px; top: 2px; width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <span>Activity status</span>
+          <div style="width: 40px; height: 20px; background: rgba(255,255,255,0.2); border-radius: 10px; position: relative;">
+            <div style="position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <span>Email alerts</span>
+          <div style="width: 40px; height: 20px; background: var(--accent-color); border-radius: 10px; position: relative;">
+            <div style="position: absolute; right: 2px; top: 2px; width: 16px; height: 16px; background: white; border-radius: 50%;"></div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 14px; margin-top: 10px;">Flat, unorganized interface with no visual cues</p>
+    </div>
+  </div>
+</section>
+
+<!-- Empty States -->
+<section>
+  <h2>Thoughtful <span class="accent">Empty States</span></h2>
+  <p>Every screen should be an opportunity to guide users</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 20px; text-align: center; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 3H4.99C3.89 3 3 3.9 3 5L3.01 19C3.01 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 15H15C15 16.66 13.65 18 12 18C10.35 18 9 16.66 9 15H4.99V5H19V15Z" fill="rgba(255, 255, 255, 0.3)"/>
+        </svg>
+        <h3 style="margin: 15px 0;">No messages yet</h3>
+        <p style="margin-bottom: 20px; opacity: 0.7;">Your inbox is empty. Start a new conversation.</p>
+        <div class="button primary">New Message</div>
+      </div>
+      <p style="font-size: 14px; margin-top: 10px;">Informative with clear next steps</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 40px; text-align: center; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <p>No data</p>
+      </div>
+      <p style="font-size: 14px; margin-top: 10px;">Uninformative and doesn't guide the user</p>
+    </div>
+  </div>
+</section>
+
 <!-- Loading States -->
 <section>
   <h2>Handle <span class="accent">Loading States</span> Elegantly</h2>
@@ -601,6 +781,647 @@
         <p>Please wait...</p>
       </div>
       <p>No visual indicator or control options</p>
+    </div>
+  </div>
+</section>
+
+      <!-- Responsive Design -->
+<section>
+  <h2><span class="accent">Responsive</span> Design Best Practices</h2>
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Design fluid layouts that adapt to screen sizes</li>
+        <li>Use relative units (em, rem, %) instead of pixels</li>
+        <li>Implement flexible images and media</li>
+        <li>Prioritize content differently across devices</li>
+        <li>Test on actual devices, not just simulators</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Create fixed-width layouts</li>
+        <li>Hide critical information on mobile</li>
+        <li>Rely on hover states for mobile interfaces</li>
+        <li>Ignore device-specific capabilities</li>
+        <li>Forget about performance optimization</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="example-container" style="margin-top: 20px;">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+        <div style="width: 30%; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px;">
+          <div style="height: 60px; background: rgba(10, 132, 255, 0.2); border-radius: 4px; margin-bottom: 10px;"></div>
+          <div style="height: 10px; width: 80%; background: rgba(255,255,255,0.2); border-radius: 2px; margin-bottom: 5px;"></div>
+          <div style="height: 10px; width: 60%; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+        </div>
+        <div style="width: 65%; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="width: 48%; height: 30px; background: rgba(10, 132, 255, 0.2); border-radius: 4px;"></div>
+            <div style="width: 48%; height: 30px; background: rgba(10, 132, 255, 0.2); border-radius: 4px;"></div>
+          </div>
+          <div style="height: 10px; width: 100%; background: rgba(255,255,255,0.2); border-radius: 2px; margin-bottom: 5px;"></div>
+          <div style="height: 10px; width: 90%; background: rgba(255,255,255,0.2); border-radius: 2px; margin-bottom: 5px;"></div>
+          <div style="height: 10px; width: 95%; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 10px;">Flexible grid adapts to different screen sizes</p>
+    </div>
+  </div>
+</section>
+
+<!-- Typography -->
+<section>
+  <h2>Effective <span class="accent">Typography</span></h2>
+  <p>Typography is a cornerstone of good UI design</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px;">
+        <h3 style="font-size: 1.6em; margin: 0 0 10px 0; line-height: 1.2;">Clear heading with good contrast</h3>
+        <p style="font-size: 1em; line-height: 1.5; margin-bottom: 15px;">Body text is legible with sufficient line height and proper spacing. The contrast between text and background is strong, making content easy to read.</p>
+        <p style="font-size: 0.9em; opacity: 0.8;">Secondary information in a slightly smaller size but still readable.</p>
+      </div>
+      <p>Readable text with clear hierarchy</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px;">
+        <h3 style="font-size: 1em; margin: 0 0 5px 0; font-weight: normal; text-transform: uppercase; letter-spacing: 3px;">hard to read heading</h3>
+        <p style="font-size: 0.8em; line-height: 1.2; margin-bottom: 10px; color: rgba(255,255,255,0.5);">Body text that's too small with insufficient line height. This creates difficulty when reading longer passages of text, especially on smaller screens or for users with visual impairments.</p>
+        <p style="font-size: 0.7em; color: rgba(255,255,255,0.4);">Nearly invisible secondary text that strains the eyes.</p>
+      </div>
+      <p>Poor readability and insufficient contrast</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cognitive Load -->
+<section>
+  <h2>Minimize <span class="accent">Cognitive Load</span></h2>
+  <p>Don't make users think unnecessarily</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13H5V11H19V13Z" fill="#0A84FF"/>
+          </svg>
+          <div style="font-weight: 500; margin-left: 10px;">Step 2 of 3: Payment Details</div>
+        </div>
+        <div class="form-field correct" style="margin-bottom: 15px;">
+          <input type="text" placeholder="Card number" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <div class="form-field correct" style="width: 48%;">
+            <input type="text" placeholder="MM/YY" />
+          </div>
+          <div class="form-field correct" style="width: 48%;">
+            <input type="text" placeholder="CVC" />
+          </div>
+        </div>
+        <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+          <div class="button secondary">Back</div>
+          <div class="button primary">Continue</div>
+        </div>
+      </div>
+      <p>Simple, focused interface with clear steps</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden;">
+        <div style="font-weight: 500; margin-bottom: 15px;">Checkout</div>
+        <div class="form-field error" style="margin-bottom: 10px;">
+          <input type="text" placeholder="Card number" />
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+          <div class="form-field error" style="width: 30%;">
+            <input type="text" placeholder="Month" />
+          </div>
+          <div class="form-field error" style="width: 30%;">
+            <input type="text" placeholder="Year" />
+          </div>
+          <div class="form-field error" style="width: 30%;">
+            <input type="text" placeholder="CVC" />
+          </div>
+        </div>
+        <div class="form-field error" style="margin-bottom: 10px;">
+          <input type="text" placeholder="Name on card" />
+        </div>
+        <div class="form-field error" style="margin-bottom: 10px;">
+          <input type="text" placeholder="Address" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <div class="form-field error" style="width: 48%;">
+            <input type="text" placeholder="City" />
+          </div>
+          <div class="form-field error" style="width: 48%;">
+            <input type="text" placeholder="ZIP" />
+          </div>
+        </div>
+        <div style="margin-top: 20px; display: flex; justify-content: center;">
+          <div class="button primary">Pay Now</div>
+        </div>
+      </div>
+      <p>Overwhelming form with too many fields at once</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gesture Design -->
+<section>
+  <h2>Intuitive <span class="accent">Gesture</span> Design</h2>
+  <p>Touch interactions should feel natural and discoverable</p>
+  
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Use standard gestures consistently</li>
+        <li>Provide visual cues for available gestures</li>
+        <li>Ensure touch targets are at least 44×44 points</li>
+        <li>Test gestures with real users</li>
+        <li>Consider edge cases and accessibility</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Invent new gestures without clear need</li>
+        <li>Hide essential functions behind gestures</li>
+        <li>Create gesture conflicts</li>
+        <li>Make touch targets too small or too close</li>
+        <li>Rely solely on gestures without alternatives</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="highlight-box" style="margin-top: 20px;">
+    <div style="display: flex; align-items: center; justify-content: space-around;">
+      <div style="text-align: center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="#0A84FF"/>
+        </svg>
+        <p style="margin: 5px 0 0 0; font-size: 0.8em;">Tap</p>
+      </div>
+      <div style="text-align: center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#0A84FF"/>
+        </svg>
+        <p style="margin: 5px 0 0 0; font-size: 0.8em;">Long Press</p>
+      </div>
+      <div style="text-align: center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.41 8.59L12 13.17L16.59 8.59L18 10L12 16L6 10L7.41 8.59Z" fill="#0A84FF"/>
+        </svg>
+        <p style="margin: 5px 0 0 0; font-size: 0.8em;">Swipe</p>
+      </div>
+      <div style="text-align: center;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 9H14V6H17L12 1L7 6H10V9ZM9 10H6V7L1 12L6 17V14H9V10ZM14 15H10V18H7L12 23L17 18H14V15ZM15 14H18V17L23 12L18 7V10H15V14Z" fill="#0A84FF"/>
+        </svg>
+        <p style="margin: 5px 0 0 0; font-size: 0.8em;">Pinch</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Dark Mode -->
+<section>
+  <h2>Effective <span class="accent">Dark Mode</span> Design</h2>
+  <p>Dark mode is not just inverting colors</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: #121212; border-radius: 8px;">
+        <h3 style="color: #ffffff; margin-top: 0;">Dark Mode Done Right</h3>
+        <p style="color: rgba(255,255,255,0.87);">Primary text remains highly readable with 87% opacity.</p>
+        <p style="color: rgba(255,255,255,0.6);">Secondary text at 60% opacity maintains the hierarchy.</p>
+        <div style="margin-top: 15px; display: flex; gap: 10px;">
+          <div class="button primary">Primary</div>
+          <div class="button secondary" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">Secondary</div>
+        </div>
+      </div>
+      <p>Uses varying opacities and subtle surfaces</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: #000000; border-radius: 8px;">
+        <h3 style="color: #ffffff; margin-top: 0;">Poor Dark Mode</h3>
+        <p style="color: #ffffff;">Text with 100% white creates eye strain.</p>
+        <p style="color: #aaaaaa;">Secondary text with poor contrast ratio.</p>
+        <div style="margin-top: 15px; display: flex; gap: 10px;">
+          <div class="button primary" style="background-color: #ff0000; box-shadow: none;">Primary</div>
+          <div class="button secondary" style="background: #333333; color: #ffffff; border: none;">Secondary</div>
+        </div>
+      </div>
+      <p>Uses pure black with harsh contrasts</p>
+    </div>
+  </div>
+</section>
+
+<!-- Onboarding -->
+<section>
+  <h2>Effective <span class="accent">Onboarding</span></h2>
+  <p>First impressions set expectations for your product</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 15px; right: 15px;">
+          <div style="padding: 5px 10px; background: rgba(255,255,255,0.1); border-radius: 20px; font-size: 12px;">Skip</div>
+        </div>
+        <div style="text-align: center; padding: 20px 0;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#0A84FF" stroke-width="2"/>
+            <path d="M12 6V12L16 14" stroke="#0A84FF" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h3 style="margin: 15px 0;">Track Your Time</h3>
+          <p style="opacity: 0.8; margin-bottom: 20px;">Easily log your activities and see where your time goes.</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px;">
+          <div style="width: 8px; height: 8px; background: var(--accent-color); border-radius: 50%;"></div>
+          <div style="width: 8px; height: 8px; background: rgba(255,255,255,0.3); border-radius: 50%;"></div>
+          <div style="width: 8px; height: 8px; background: rgba(255,255,255,0.3); border-radius: 50%;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+          <div class="button primary">Next</div>
+        </div>
+      </div>
+      <p>Focused, contextual introduction with opt-out</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px; text-align: center;">
+        <h3 style="margin-top: 0;">Welcome to the App!</h3>
+        <div style="height: 120px; display: flex; flex-direction: column; justify-content: space-between; margin: 20px 0;">
+          <p style="margin: 0; font-size: 14px;">• Track your time across projects</p>
+          <p style="margin: 0; font-size: 14px;">• Generate detailed reports</p>
+          <p style="margin: 0; font-size: 14px;">• Set goals and reminders</p>
+          <p style="margin: 0; font-size: 14px;">• Sync across multiple devices</p>
+          <p style="margin: 0; font-size: 14px;">• Export data to CSV or PDF</p>
+          <p style="margin: 0; font-size: 14px;">• Integrate with other services</p>
+        </div>
+        <div class="button primary">Let's Begin</div>
+      </div>
+      <p>Feature dump without context or prioritization</p>
+    </div>
+  </div>
+</section>
+
+<!-- Consistency -->
+<section>
+  <h2>Maintain <span class="accent">Consistency</span></h2>
+  <p>Consistency builds familiarity and reduces cognitive load</p>
+  
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Use consistent terminology throughout</li>
+        <li>Maintain visual consistency (colors, icons, spacing)</li>
+        <li>Keep interaction patterns predictable</li>
+        <li>Follow platform conventions when appropriate</li>
+        <li>Establish and follow a design system</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Mix different design styles or themes</li>
+        <li>Change terminology for the same concept</li>
+        <li>Place similar functions in different locations</li>
+        <li>Use different patterns for similar interactions</li>
+        <li>Introduce unnecessary novelty in basic functions</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="example-container" style="margin-top: 20px;">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <div style="padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z" fill="#0A84FF"/>
+            </svg>
+            <span>Messages</span>
+          </div>
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-color); display: flex; justify-content: center; align-items: center;">
+            <span style="font-size: 12px;">3</span>
+          </div>
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="#0A84FF"/>
+            </svg>
+            <span>Contacts</span>
+          </div>
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-color); display: flex; justify-content: center; align-items: center;">
+            <span style="font-size: 12px;">7</span>
+          </div>
+        </div>
+      </div>
+      <p>Consistent layout, spacing, and visual elements</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <div style="padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z" fill="#0A84FF"/>
+            </svg>
+            <span>Messages</span>
+          </div>
+          <div style="padding: 2px 8px; border-radius: 4px; background: var(--accent-color);">
+            <span style="font-size: 12px;">3 new</span>
+          </div>
+        </div>
+        <div style="padding: 15px 10px; background: rgba(255,255,255,0.05); border-radius: 4px;">
+          <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+            <span style="font-weight: 600;">Contacts</span>
+            <span style="color: var(--accent-color);">7</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="#8E8E93"/>
+            </svg>
+            <span style="font-size: 14px;">View all contacts</span>
+          </div>
+        </div>
+      </div>
+      <p>Inconsistent layouts, spacing, and visual treatment</p>
+    </div>
+  </div>
+</section>
+      <!-- Animations & Transitions -->
+<section>
+  <h2>Purposeful <span class="accent">Animations</span></h2>
+  <p>Animations should enhance the experience, not distract from it</p>
+  
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Use animations to convey meaning</li>
+        <li>Keep transitions smooth and quick (150-300ms)</li>
+        <li>Animate along logical paths</li>
+        <li>Ensure animations are consistent</li>
+        <li>Provide option to reduce motion</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Add animations purely for decoration</li>
+        <li>Create animations that are too slow</li>
+        <li>Use jarring or unexpected movements</li>
+        <li>Animate everything on the screen at once</li>
+        <li>Ignore accessibility concerns</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="highlight-box" style="margin-top: 20px;">
+    <p class="center">Common animation uses:</p>
+    <div style="display: flex; justify-content: space-around; margin-top: 15px;">
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: rgba(10, 132, 255, 0.2); border-radius: 12px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#0A84FF"/>
+            <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" fill="#0A84FF"/>
+          </svg>
+        </div>
+        <p style="margin: 8px 0 0 0; font-size: 0.8em;">Feedback</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: rgba(10, 132, 255, 0.2); border-radius: 12px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 9H15V3H9V9H5L12 16L19 9ZM5 18V20H19V18H5Z" fill="#0A84FF"/>
+          </svg>
+        </div>
+        <p style="margin: 8px 0 0 0; font-size: 0.8em;">Transitions</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: rgba(10, 132, 255, 0.2); border-radius: 12px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 6V9L16 5L12 1V4C7.58 4 4 7.58 4 12C4 13.57 4.46 15.03 5.24 16.26L6.7 14.8C6.25 13.97 6 13.01 6 12C6 8.69 8.69 6 12 6ZM18.76 7.74L17.3 9.2C17.74 10.04 18 10.99 18 12C18 15.31 15.31 18 12 18V15L8 19L12 23V20C16.42 20 20 16.42 20 12C20 10.43 19.54 8.97 18.76 7.74Z" fill="#0A84FF"/>
+          </svg>
+        </div>
+        <p style="margin: 8px 0 0 0; font-size: 0.8em;">State Changes</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 60px; height: 60px; background: rgba(10, 132, 255, 0.2); border-radius: 12px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.4 16.6L4.8 12L9.4 7.4L8 6L2 12L8 18L9.4 16.6ZM14.6 16.6L19.2 12L14.6 7.4L16 6L22 12L16 18L14.6 16.6Z" fill="#0A84FF"/>
+          </svg>
+        </div>
+        <p style="margin: 8px 0 0 0; font-size: 0.8em;">Orientation</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="example-container" style="margin-top: 20px;">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px; text-align: center;">
+        <p>Subtle button hover effect</p>
+        <div class="button primary" style="transform: scale(1.05); box-shadow: 0 0 20px rgba(10, 132, 255, 0.6);">
+          Submit
+        </div>
+        <div style="margin-top: 15px; font-size: 0.8em; opacity: 0.7;">
+          Quick scale (200ms) with subtle glow
+        </div>
+      </div>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px; text-align: center;">
+        <p>Distracting button effect</p>
+        <div class="button primary" style="animation: spin 2s linear infinite;">
+          Submit
+        </div>
+        <div style="margin-top: 15px; font-size: 0.8em; opacity: 0.7;">
+          Continuous rotation creates distraction
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- Data Visualization -->
+<section>
+  <h2>Effective <span class="accent">Data Visualization</span></h2>
+  <p>Present complex data in an intuitive, meaningful way</p>
+  
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Choose appropriate chart types for your data</li>
+        <li>Use consistent color schemes with meaning</li>
+        <li>Provide clear labeling and legends</li>
+        <li>Include context and comparisons</li>
+        <li>Allow filtering and interaction when needed</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Distort data with misleading scales</li>
+        <li>Use 3D effects or unnecessary decoration</li>
+        <li>Mix too many variables in one visualization</li>
+        <li>Rely only on color to convey meaning</li>
+        <li>Overcomplicate with unnecessary details</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="example-container" style="margin-top: 20px;">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <h4 style="margin-top: 0; margin-bottom: 15px;">Monthly Users (2024-2025)</h4>
+        <div style="height: 160px; position: relative;">
+          <!-- SVG Bar Chart Example -->
+          <svg width="100%" height="100%" viewBox="0 0 300 160" style="overflow: visible;">
+            <!-- Y-axis -->
+            <line x1="40" y1="10" x2="40" y2="140" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+            <!-- X-axis -->
+            <line x1="40" y1="140" x2="280" y2="140" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+            
+            <!-- Y-axis labels -->
+            <text x="35" y="20" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="end">100k</text>
+            <text x="35" y="60" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="end">75k</text>
+            <text x="35" y="100" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="end">50k</text>
+            <text x="35" y="140" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="end">0</text>
+            
+            <!-- Bars -->
+            <rect x="60" y="80" width="20" height="60" fill="#0A84FF" />
+            <rect x="100" y="60" width="20" height="80" fill="#0A84FF" />
+            <rect x="140" y="40" width="20" height="100" fill="#0A84FF" />
+            <rect x="180" y="20" width="20" height="120" fill="#0A84FF" />
+            <rect x="220" y="30" width="20" height="110" fill="#0A84FF" />
+            
+            <!-- X-axis labels -->
+            <text x="70" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">Jan</text>
+            <text x="110" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">Feb</text>
+            <text x="150" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">Mar</text>
+            <text x="190" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">Apr</text>
+            <text x="230" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">May</text>
+          </svg>
+        </div>
+        <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-size: 0.8em; opacity: 0.7;">Source: User Analytics 2025</div>
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #0A84FF; border-radius: 2px;"></div>
+            <span style="font-size: 0.8em;">Monthly active users</span>
+          </div>
+        </div>
+      </div>
+      <p>Clear labels, proper scale, and minimal design</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">User Statistics</div>
+        <div style="height: 160px; position: relative; perspective: 500px;">
+          <!-- SVG Misleading Chart Example -->
+          <svg width="100%" height="100%" viewBox="0 0 300 160" style="overflow: visible; transform: rotateX(20deg) rotateY(10deg);">
+            <!-- Bars with misleading y-axis start -->
+            <rect x="60" y="130" width="20" height="10" fill="#FF453A" />
+            <rect x="100" y="110" width="20" height="30" fill="#30D158" />
+            <rect x="140" y="90" width="20" height="50" fill="#0A84FF" />
+            <rect x="180" y="80" width="20" height="60" fill="#FFD60A" />
+            <rect x="220" y="100" width="20" height="40" fill="#BF5AF2" />
+            
+            <!-- X-axis -->
+            <line x1="40" y1="140" x2="280" y2="140" stroke="rgba(255,255,255,0.5)" stroke-width="1" />
+            
+            <!-- X-axis labels without context -->
+            <text x="70" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">A</text>
+            <text x="110" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">B</text>
+            <text x="150" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">C</text>
+            <text x="190" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">D</text>
+            <text x="230" y="155" fill="rgba(255,255,255,0.7)" font-size="10" text-anchor="middle">E</text>
+            
+            <!-- No y-axis labels -->
+          </svg>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 15px; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #FF453A; border-radius: 2px;"></div>
+            <span style="font-size: 0.8em;">Red</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #30D158; border-radius: 2px;"></div>
+            <span style="font-size: 0.8em;">Green</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <div style="width: 10px; height: 10px; background: #0A84FF; border-radius: 2px;"></div>
+            <span style="font-size: 0.8em;">Blue</span>
+          </div>
+        </div>
+      </div>
+      <p>3D perspective, no scale, confusing labels, and arbitrary colors</p>
+    </div>
+  </div>
+</section>
+
+<!-- Whitespace Usage -->
+<section>
+  <h2>Strategic <span class="accent">Whitespace</span> Usage</h2>
+  <p>Breathing room is essential for clarity and focus</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 25px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <h3 style="margin-top: 0; margin-bottom: 20px;">Product Features</h3>
+        <div style="margin-bottom: 20px;">
+          <h4 style="margin: 0 0 10px 0;">Cloud Sync</h4>
+          <p style="margin: 0; line-height: 1.5;">Access your content from any device with automatic synchronization.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <h4 style="margin: 0 0 10px 0;">Collaboration</h4>
+          <p style="margin: 0; line-height: 1.5;">Work together with your team in real-time.</p>
+        </div>
+        <div>
+          <h4 style="margin: 0 0 10px 0;">Analytics</h4>
+          <p style="margin: 0; line-height: 1.5;">Track performance with comprehensive reporting tools.</p>
+        </div>
+      </div>
+      <p>Generous spacing creates hierarchy and improves readability</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <h3 style="margin-top: 0; margin-bottom: 5px;">Product Features</h3>
+        <div style="margin-bottom: 5px;">
+          <h4 style="margin: 0 0 2px 0;">Cloud Sync</h4>
+          <p style="margin: 0; line-height: 1.2;">Access your content from any device with automatic synchronization.</p>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <h4 style="margin: 0 0 2px 0;">Collaboration</h4>
+          <p style="margin: 0; line-height: 1.2;">Work together with your team in real-time.</p>
+        </div>
+        <div>
+          <h4 style="margin: 0 0 2px 0;">Analytics</h4>
+          <p style="margin: 0; line-height: 1.2;">Track performance with comprehensive reporting tools.</p>
+        </div>
+      </div>
+      <p>Cluttered layout with insufficient spacing</p>
     </div>
   </div>
 </section>
