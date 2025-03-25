@@ -552,33 +552,6 @@
   </div>
 </section>
 
-<!-- Accessibility -->
-<section>
-  <h2><span class="accent">Accessibility</span> Matters</h2>
-  <div class="container">
-    <div class="column do">
-      <h3 class="success">DO</h3>
-      <ul>
-        <li>Use sufficient color contrast</li>
-        <li>Support screen readers</li>
-        <li>Provide text alternatives for images</li>
-        <li>Design for keyboard navigation</li>
-        <li>Make touch targets adequately sized</li>
-      </ul>
-    </div>
-    <div class="column dont">
-      <h3 class="error">DON'T</h3>
-      <ul>
-        <li>Rely solely on color to convey information</li>
-        <li>Use tiny text or fonts below 16px</li>
-        <li>Create interfaces that require precision movements</li>
-        <li>Autohide critical navigation</li>
-        <li>Ignore accessibility guidelines</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
       <!-- Navigation Patterns -->
 <section>
   <h2>Intuitive <span class="accent">Navigation</span> Patterns</h2>
@@ -1449,6 +1422,243 @@
         <li>Ignore device capabilities</li>
         <li>Forget about performance</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+      <!-- Accessibility -->
+<section>
+  <h2><span class="accent">Accessibility</span> Matters</h2>
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Use sufficient color contrast</li>
+        <li>Support screen readers</li>
+        <li>Provide text alternatives for images</li>
+        <li>Design for keyboard navigation</li>
+        <li>Make touch targets adequately sized</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Rely solely on color to convey information</li>
+        <li>Use tiny text or fonts below 16px</li>
+        <li>Create interfaces that require precision movements</li>
+        <li>Autohide critical navigation</li>
+        <li>Ignore accessibility guidelines</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <!-- Accessibility Introduction -->
+<section>
+  <h2><span class="accent">Accessibility</span> Foundations</h2>
+  <p>Creating experiences that work for everyone is not optional — it's essential</p>
+  
+  <div class="container">
+    <div class="column">
+      <div class="highlight-box">
+        <p class="center">1.3 billion people globally live with some form of disability</p>
+      </div>
+      <ul>
+        <li>Accessibility benefits <b>everyone</b>, not just people with disabilities</li>
+        <li>Improves usability across different contexts and situations</li>
+        <li>Legally required in many countries and industries</li>
+        <li>Expands your potential user base significantly</li>
+        <li>Creates a more inclusive digital world</li>
+      </ul>
+    </div>
+    <div class="column">
+      <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 15px; height: 100%;">
+        <h3 style="margin-top: 0; color: var(--accent-color);">Key Principles</h3>
+        <ul>
+          <li><b>Perceivable</b>: Information must be presentable in ways all users can perceive</li>
+          <li><b>Operable</b>: UI components must be operable by everyone</li>
+          <li><b>Understandable</b>: Information and operation must be understandable</li>
+          <li><b>Robust</b>: Content must be robust enough to work with assistive technologies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Color Contrast Accessibility -->
+<section>
+  <h2>Color <span class="accent">Contrast</span> & Accessibility</h2>
+  <p>Sufficient contrast ensures content is perceivable by everyone</p>
+  
+  <div class="example-container">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div style="margin-bottom: 15px; color: white; background: #0A84FF; padding: 10px; border-radius: 4px; font-weight: 500;">
+          Primary Button (4.5:1 contrast ratio)
+        </div>
+        <div style="margin-bottom: 15px; background: white; color: #0A0A0A; padding: 10px; border-radius: 4px; font-weight: 500;">
+          High Contrast Text (21:1 contrast ratio)
+        </div>
+        <div style="color: rgba(255,255,255,0.9); background: #0A0A0A; padding: 10px; border-radius: 4px; font-weight: 500;">
+          Light Text on Dark (15:1 contrast ratio)
+        </div>
+      </div>
+      <div style="margin-top: 15px;">
+        <p style="margin: 0 0 5px 0;">WCAG Guidelines:</p>
+        <ul style="margin: 0; padding-left: 20px; font-size: 0.9em;">
+          <li>Text: Minimum 4.5:1 contrast ratio</li>
+          <li>Large Text: Minimum 3:1 contrast ratio</li>
+          <li>UI Components: Minimum 3:1 contrast ratio</li>
+        </ul>
+      </div>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div style="margin-bottom: 15px; color: #A2D6FF; background: #82B7FF; padding: 10px; border-radius: 4px; font-weight: 500;">
+          Low Contrast Button (1.2:1 contrast ratio)
+        </div>
+        <div style="margin-bottom: 15px; color: #AAAAAA; background: #D8D8D8; padding: 10px; border-radius: 4px; font-weight: 500;">
+          Gray on Light Gray (1.5:1 contrast ratio)
+        </div>
+        <div style="color: rgba(255,255,255,0.4); background: #333333; padding: 10px; border-radius: 4px; font-weight: 500;">
+          Faded Text on Dark (2.1:1 contrast ratio)
+        </div>
+      </div>
+      <div style="margin-top: 15px;">
+        <p style="margin: 0;">Insufficient contrast makes content:</p>
+        <ul style="margin: 0; padding-left: 20px; font-size: 0.9em;">
+          <li>Difficult to read for users with low vision</li>
+          <li>Unusable in bright lighting conditions</li>
+          <li>Problematic for users with color vision deficiency</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Keyboard Accessibility -->
+<section>
+  <h2><span class="accent">Keyboard</span> Accessibility</h2>
+  <p>Many users navigate exclusively with keyboards</p>
+  
+  <div class="container">
+    <div class="column do">
+      <h3 class="success">DO</h3>
+      <ul>
+        <li>Ensure all interactive elements are keyboard accessible</li>
+        <li>Provide visible focus indicators</li>
+        <li>Maintain logical tab order matching visual layout</li>
+        <li>Create keyboard shortcuts for common actions</li>
+        <li>Test your interface using only a keyboard</li>
+      </ul>
+    </div>
+    <div class="column dont">
+      <h3 class="error">DON'T</h3>
+      <ul>
+        <li>Create interfaces that require mouse hovering</li>
+        <li>Remove focus outlines without alternatives</li>
+        <li>Create keyboard traps users can't escape</li>
+        <li>Hide important controls behind complex gestures</li>
+        <li>Rely on drag-and-drop without alternatives</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="example-container" style="margin-top: 20px;">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div tabindex="0" style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 10px; outline: 2px solid var(--accent-color); outline-offset: 2px;">
+          Item 1 (focused)
+        </div>
+        <div tabindex="0" style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 10px;">
+          Item 2
+        </div>
+        <div tabindex="0" style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 4px;">
+          Item 3
+        </div>
+      </div>
+      <p>Clear focus indicators help users navigate</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <div style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 10px;">
+          Item 1 (focused but no indicator)
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 10px;">
+          Item 2
+        </div>
+        <div style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 4px;">
+          Item 3
+        </div>
+      </div>
+      <p>No focus indicators make keyboard navigation impossible</p>
+    </div>
+  </div>
+</section>
+
+<!-- Screen Reader Support -->
+<section>
+  <h2>Screen Reader <span class="accent">Support</span></h2>
+  <p>Make your content accessible to people who can't see it</p>
+  
+  <div class="container">
+    <div class="column">
+      <div style="background: rgba(10, 132, 255, 0.1); border-radius: 12px; padding: 15px;">
+        <h3 style="margin-top: 0; color: var(--accent-color);">Key Techniques</h3>
+        <ul>
+          <li>Provide meaningful alt text for images</li>
+          <li>Use semantic HTML elements</li>
+          <li>Add ARIA labels for custom elements</li>
+          <li>Ensure form fields have proper labels</li>
+          <li>Create descriptive link text</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column">
+      <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 15px; height: 100%;">
+        <h3 style="margin-top: 0;">HTML Example</h3>
+        <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.9em; overflow: auto;">
+          <span style="color: #808080;">&lt;!-- Bad --&gt;</span><br>
+          &lt;div onclick="submit()"&gt;Click here&lt;/div&gt;<br><br>
+          <span style="color: #808080;">&lt;!-- Good --&gt;</span><br>
+          &lt;button type="submit" aria-label="Submit form"&gt;<br>
+          &nbsp;&nbsp;Submit Application<br>
+          &lt;/button&gt;
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="example-container" style="margin-top: 20px;">
+    <div class="example good">
+      <div class="example-label good">DO</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <img src="/api/placeholder/300/200" alt="A diagram showing the user authentication flow with four steps: login, verification, profile selection, and dashboard" style="width: 100%; border-radius: 4px; margin-bottom: 10px;" />
+        <select style="width: 100%; padding: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: white;">
+          <option>Select your country (required)</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>Mexico</option>
+        </select>
+      </div>
+      <p>Descriptive alt text and proper form labels</p>
+    </div>
+    <div class="example bad">
+      <div class="example-label bad">DON'T</div>
+      <div style="padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+        <img src="/api/placeholder/300/200" alt="image01.jpg" style="width: 100%; border-radius: 4px; margin-bottom: 10px;" />
+        <select style="width: 100%; padding: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: white;">
+          <option>---</option>
+          <option>US</option>
+          <option>CA</option>
+          <option>MX</option>
+        </select>
+      </div>
+      <p>Useless alt text and ambiguous form options</p>
     </div>
   </div>
 </section>
